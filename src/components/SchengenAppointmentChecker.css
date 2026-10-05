@@ -1,0 +1,690 @@
+/* =========================================================
+   PAGE
+========================================================= */
+
+.schengen-page {
+  min-height: 100vh;
+  background: #0a0c12;
+  color: #f5f7fb;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.schengen-hero {
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(76, 51, 143, 0.35),
+      transparent 38%
+    ),
+    #090b11;
+}
+
+.schengen-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 43px 43px;
+
+  pointer-events: none;
+}
+
+.schengen-hero-inner {
+  position: relative;
+  z-index: 2;
+
+  width: min(1050px, calc(100% - 48px));
+  margin: 0 auto;
+
+  padding: 80px 0 75px;
+}
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.schengen-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 27px;
+
+  color: #7e8da8;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.schengen-breadcrumb strong {
+  color: #f0f2f7;
+}
+
+/* =========================================================
+   LIVE PILL
+========================================================= */
+
+.schengen-live-pill {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 7px 12px;
+
+  border: 1px solid rgba(153, 139, 185, 0.35);
+
+  border-radius: 999px;
+
+  background: rgba(100, 76, 154, 0.13);
+
+  color: #bcc3d2;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.schengen-live-dot {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #00d8a0;
+
+  box-shadow:
+    0 0 0 4px rgba(0, 216, 160, 0.08);
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.schengen-hero h1 {
+  max-width: 1050px;
+
+  margin: 30px 0 15px;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: clamp(47px, 5vw, 67px);
+
+  line-height: 1.03;
+
+  letter-spacing: -2.8px;
+
+  font-weight: 700;
+}
+
+.schengen-subtitle {
+  margin: 0;
+
+  color: #97a2b7;
+
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   FILTER CARD
+========================================================= */
+
+.schengen-filter-card {
+  margin-top: 42px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.1fr
+    1.1fr
+    1.1fr
+    1.1fr
+    1fr;
+
+  gap: 0;
+
+  padding: 14px 16px;
+
+  border: 1px solid #292e3a;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(24, 27, 37, 0.97),
+      rgba(14, 17, 25, 0.97)
+    );
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.schengen-filter {
+  min-width: 0;
+
+  padding: 0 16px;
+
+  border-right: 1px solid #292d36;
+}
+
+.schengen-filter:first-child {
+  padding-left: 6px;
+}
+
+.schengen-filter:last-child {
+  border-right: 0;
+  padding-right: 5px;
+}
+
+.schengen-filter label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #8794ab;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.6px;
+}
+
+.schengen-filter select {
+  width: 100%;
+
+  height: 42px;
+
+  border: 0;
+  outline: 0;
+
+  background: transparent;
+
+  color: #7d8da8;
+
+  font-size: 16px;
+
+  cursor: pointer;
+}
+
+.schengen-filter select:enabled {
+  color: #e0e4ec;
+}
+
+.schengen-filter select:disabled {
+  color: #465066;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   TRAVELLER STEPPER
+========================================================= */
+
+.traveller-stepper {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8px;
+
+  border: 1px solid #303542;
+
+  border-radius: 12px;
+
+  background: #191c25;
+}
+
+.traveller-stepper button {
+  width: 30px;
+  height: 30px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #aab3c2;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+.traveller-stepper strong {
+  color: #f2f4f7;
+
+  font-size: 17px;
+}
+
+/* =========================================================
+   CHECK BUTTON
+========================================================= */
+
+.schengen-check-button {
+  margin-top: 18px;
+
+  padding: 13px 21px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: #584de4;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-shadow:
+    0 12px 30px rgba(76, 65, 210, 0.22);
+}
+
+.schengen-check-button:hover:not(:disabled) {
+  background: #6459ea;
+}
+
+.schengen-check-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.schengen-main {
+  position: relative;
+
+  width: min(1050px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 48px 0 90px;
+}
+
+/* =========================================================
+   PICK STATE
+========================================================= */
+
+.schengen-pick-state {
+  min-height: 140px;
+
+  padding: 35px;
+
+  border: 1px dashed #303641;
+
+  border-radius: 18px;
+
+  background: rgba(19, 22, 30, 0.68);
+
+  text-align: center;
+}
+
+.schengen-pick-state h2 {
+  margin: 6px 0 12px;
+
+  font-size: 18px;
+}
+
+.schengen-pick-state p {
+  margin: 0;
+
+  color: #8d99ae;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   API ERROR
+========================================================= */
+
+.schengen-api-error {
+  margin-bottom: 20px;
+
+  padding: 14px 17px;
+
+  border: 1px solid rgba(211, 75, 75, 0.35);
+
+  border-radius: 12px;
+
+  background: rgba(145, 32, 32, 0.1);
+
+  color: #eea1a1;
+
+  font-size: 13px;
+}
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.schengen-results-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.schengen-result-card {
+  padding: 21px;
+
+  border: 1px solid #292e38;
+
+  border-radius: 18px;
+
+  background: #12151d;
+}
+
+.result-card-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  color: #8792a7;
+
+  font-size: 12px;
+}
+
+.result-status {
+  color: #36d5aa;
+}
+
+.no-slots {
+  color: #e58e8e;
+}
+
+.schengen-result-card h2 {
+  margin: 21px 0;
+
+  font-size: 22px;
+}
+
+.result-slot {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #292e38;
+}
+
+.result-slot span {
+  color: #8792a7;
+
+  font-size: 12px;
+}
+
+.result-slot strong {
+  font-size: 16px;
+}
+
+.result-slot small {
+  color: #9aa4b5;
+}
+
+.schengen-empty {
+  padding: 60px 20px;
+
+  border: 1px dashed #303641;
+
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.schengen-empty h2 {
+  margin: 0 0 10px;
+}
+
+.schengen-empty p {
+  margin: 0;
+
+  color: #8d99ae;
+}
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.schengen-faq {
+  margin-top: 85px;
+
+  padding: 30px;
+
+  border: 1px solid #292e38;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(22, 25, 34, 0.95),
+      rgba(17, 20, 28, 0.95)
+    );
+}
+
+.schengen-faq > h2 {
+  margin: 0 0 28px;
+
+  font-size: 25px;
+
+  letter-spacing: -0.5px;
+}
+
+.schengen-faq-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.schengen-faq-item {
+  overflow: hidden;
+
+  border: 1px solid #2e333e;
+
+  border-radius: 17px;
+
+  background: #151820;
+}
+
+.schengen-faq-question {
+  width: 100%;
+
+  min-height: 72px;
+
+  padding: 0 21px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #f1f2f5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.schengen-faq-question:hover {
+  background: #1a1e27;
+}
+
+.schengen-faq-chevron {
+  flex-shrink: 0;
+
+  margin-left: 20px;
+
+  color: #aeb8cb;
+
+  font-size: 20px;
+}
+
+.schengen-faq-answer {
+  padding: 0 21px 24px;
+
+  border-top: 1px solid #2e333e;
+}
+
+.schengen-faq-answer p {
+  margin: 22px 0 0;
+
+  color: #bbc4d3;
+
+  font-size: 15px;
+
+  line-height: 1.65;
+}
+
+.schengen-faq-answer strong {
+  color: #f3f4f7;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 950px) {
+  .schengen-filter-card {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .schengen-filter {
+    padding: 12px 15px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #292d36;
+  }
+
+  .schengen-filter:nth-last-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .schengen-results-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .schengen-hero-inner,
+  .schengen-main {
+    width: calc(100% - 28px);
+  }
+
+  .schengen-hero-inner {
+    padding: 50px 0 55px;
+  }
+
+  .schengen-hero h1 {
+    font-size: 45px;
+
+    letter-spacing: -2px;
+  }
+
+  .schengen-subtitle {
+    font-size: 16px;
+  }
+
+  .schengen-filter-card {
+    grid-template-columns: 1fr;
+
+    padding: 8px 10px;
+
+    border-radius: 18px;
+  }
+
+  .schengen-filter,
+  .schengen-filter:first-child,
+  .schengen-filter:last-child {
+    padding: 12px 8px;
+
+    border-right: 0;
+
+    border-bottom: 1px solid #292d36;
+  }
+
+  .schengen-filter:last-child {
+    border-bottom: 0;
+  }
+
+  .schengen-check-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .schengen-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schengen-faq {
+    padding: 18px;
+
+    border-radius: 17px;
+  }
+
+  .schengen-faq-question {
+    min-height: 67px;
+
+    font-size: 15px;
+  }
+
+  .schengen-main {
+    padding-top: 35px;
+  }
+}

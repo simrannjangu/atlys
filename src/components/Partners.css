@@ -1,0 +1,424 @@
+.partners-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+}
+
+.partners-main {
+  width: min(1280px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 70px 0 80px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.partners-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 70px;
+  align-items: end;
+  padding: 80px 0 48px;
+  border-bottom: 1px solid #dedede;
+}
+
+.partners-hero-title h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(60px, 6vw, 86px);
+  font-weight: 500;
+  line-height: 0.9;
+  letter-spacing: -5px;
+}
+
+.partners-hero-description {
+  max-width: 470px;
+  padding-bottom: 6px;
+  color: #718096;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+/* =========================
+   PARTNER CATEGORY
+========================= */
+
+.partner-category {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 30px;
+  padding: 34px 0;
+  border-bottom: 1px solid #dedede;
+}
+
+.partner-category-title {
+  padding-top: 10px;
+}
+
+.partner-category-title h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -1.5px;
+}
+
+/* =========================
+   PARTNER GRID
+========================= */
+
+.partner-grid {
+  display: grid;
+
+  /* 4 cards like Atlys */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 14px;
+
+  width: 100%;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.partner-card {
+  min-height: 142px;
+
+  border: 1px solid #e1e6ee;
+  border-radius: 16px;
+
+  background: #fff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px 15px 16px;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+
+  border-color: #cfd6e0;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.partner-logo-box {
+  width: 100%;
+  height: 65px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo {
+  max-width: 155px;
+  max-height: 58px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+}
+
+/* =========================
+   FALLBACK LOGO
+========================= */
+
+.partner-logo-fallback {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #f0f2f5;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #111;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================
+   COMPANY NAME
+========================= */
+
+.partner-name {
+  margin-top: 10px;
+
+  color: #737373;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  text-align: center;
+
+  max-width: 100%;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.partners-state {
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 14px;
+
+  color: #707070;
+}
+
+.partners-state p {
+  margin: 0;
+}
+
+.partners-error {
+  color: #b42318;
+}
+
+.partners-loader {
+  width: 34px;
+  height: 34px;
+
+  border: 3px solid #e7e7e7;
+  border-top-color: #111;
+
+  border-radius: 50%;
+
+  animation: partnersSpin 0.8s linear infinite;
+}
+
+@keyframes partnersSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   CTA
+========================= */
+
+.partners-cta {
+  margin-top: 55px;
+
+  min-height: 165px;
+
+  padding: 30px 44px;
+
+  border-radius: 28px;
+
+  background: #101010;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 40px;
+}
+
+.partners-cta-content h2 {
+  margin: 0 0 10px;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 37px;
+  font-weight: 500;
+
+  line-height: 0.98;
+
+  letter-spacing: -2px;
+}
+
+.partners-cta-content p {
+  margin: 0;
+
+  max-width: 600px;
+
+  color: #aaa;
+
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.partners-cta-content strong {
+  color: #fff;
+}
+
+.partners-cta-button {
+  flex-shrink: 0;
+
+  min-width: 145px;
+  height: 54px;
+
+  padding: 0 25px;
+
+  border-radius: 999px;
+
+  background: #fff;
+  color: #111;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.partners-cta-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 22px rgba(255, 255, 255, 0.15);
+}
+
+.partners-bottom-line {
+  margin-top: 90px;
+
+  height: 1px;
+
+  background: #dedede;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .partners-main {
+    width: min(100% - 40px, 1000px);
+  }
+
+  .partners-hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .partners-hero-description {
+    max-width: 650px;
+  }
+
+  .partner-category {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .partners-main {
+    width: calc(100% - 28px);
+    padding: 45px 0 50px;
+  }
+
+  .partners-hero {
+    padding: 30px 0 35px;
+    gap: 20px;
+  }
+
+  .partners-hero-title h1 {
+    font-size: 52px;
+    letter-spacing: -3px;
+  }
+
+  .partners-hero-description {
+    font-size: 16px;
+  }
+
+  .partner-category {
+    display: block;
+    padding: 30px 0;
+  }
+
+  .partner-category-title {
+    padding-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .partner-category-title h2 {
+    font-size: 30px;
+  }
+
+  .partner-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .partner-card {
+    min-height: 130px;
+  }
+
+  .partner-logo {
+    max-width: 125px;
+    max-height: 50px;
+  }
+
+  .partner-name {
+    font-size: 14px;
+  }
+
+  .partners-cta {
+    margin-top: 40px;
+    padding: 30px 24px;
+    border-radius: 22px;
+
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .partners-cta-button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 430px) {
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partners-hero-title h1 {
+    font-size: 44px;
+  }
+}

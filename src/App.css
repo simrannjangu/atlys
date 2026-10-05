@@ -1,0 +1,6860 @@
+/* =========================================
+   VISAGO — CLEAN GLOBAL CSS
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+  width: 100%;
+  height: 76px;
+  padding: 0 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: relative;
+  z-index: 100;
+}
+
+.logo {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #5b50df;
+}
+
+.nav-links {
+  display: flex;
+  gap: 34px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 35px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.signin-btn {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 24px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================
+   HOMEPAGE HERO
+   ========================================= */
+
+.home-hero {
+  min-height: 500px;
+  background: #f4f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 24px;
+}
+
+.hero-inner {
+  max-width: 850px;
+}
+
+.hero-small,
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #6258df;
+  margin: 0 0 18px;
+}
+
+.home-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(58px, 8vw, 100px);
+  line-height: .92;
+  font-weight: 500;
+  letter-spacing: -4px;
+  margin: 0;
+}
+
+.hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #666;
+  margin-top: 28px;
+}
+
+/* =========================================
+   FILTERS
+   ========================================= */
+
+.filters-wrapper {
+  padding: 28px 24px;
+  background: #fff;
+}
+
+.filters-container {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid #dedede;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.filter-box {
+  padding: 17px 20px;
+  border-right: 1px solid #ddd;
+}
+
+.filter-box:last-child {
+  border-right: 0;
+}
+
+.filter-box label {
+  display: block;
+  color: #888;
+  font-size: 11px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+
+.filter-box select,
+.date-input input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  background: transparent;
+  color: #222;
+}
+
+.date-input {
+  display: flex;
+  gap: 8px;
+}
+
+/* =========================================
+   TRUST
+   ========================================= */
+
+.trust-section,
+.trust-stats {
+  padding: 40px 24px;
+}
+
+.trust-container,
+.trust-grid {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.trust-stat {
+  padding: 30px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.trust-stat:last-child {
+  border-right: 0;
+}
+
+/* =========================================
+   DESTINATIONS
+   ========================================= */
+
+.destinations-section {
+  padding: 90px 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-heading {
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 48px;
+  font-weight: 500;
+  margin: 0 0 12px;
+}
+
+.section-heading > p:last-child {
+  color: #777;
+}
+
+.destination-controls {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.destination-search {
+  flex: 1;
+  height: 48px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  gap: 8px;
+}
+
+.destination-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+}
+
+.destination-controls select {
+  min-width: 170px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 0 14px;
+  background: #fff;
+}
+
+.destination-result-count {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.visa-card {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  border: 1px solid #e1e1e1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.visa-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
+
+.visa-card-image {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.visa-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-placeholder {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+}
+
+.visa-card-image .arrow {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.visa-card-content {
+  padding: 19px;
+}
+
+.visa-card-content h3 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+.visa-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.visa-info span {
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 1px;
+}
+
+.visa-info strong {
+  font-size: 12px;
+}
+
+.no-results {
+  text-align: center;
+  padding: 80px 0;
+}
+
+/* =========================================
+   HOW IT WORKS
+   ========================================= */
+
+.how-section {
+  background: #f7f7f5;
+  padding: 90px 24px;
+}
+
+.how-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.how-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.how-heading h2,
+.why-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+
+.how-heading p:last-child {
+  color: #777;
+  line-height: 1.6;
+}
+
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.how-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  min-height: 260px;
+}
+
+.how-number {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.how-icon {
+  margin: 45px 0 20px;
+  font-size: 28px;
+  color: #5b50df;
+}
+
+.how-card h3 {
+  margin: 0 0 10px;
+}
+
+.how-card p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/* =========================================
+   WHY VISAGO
+   ========================================= */
+
+.why-section,
+.why-modern-section {
+  padding: 90px 24px;
+}
+
+.why-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.why-card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 26px;
+}
+
+.why-card h3 {
+  margin-top: 45px;
+}
+
+.why-card p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/* =========================================
+   FAQ HOMEPAGE
+   ========================================= */
+
+.faq-section {
+  padding: 90px 24px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.faq-list {
+  border-top: 1px solid #ddd;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: 0;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-weight: 600;
+}
+
+.faq-answer {
+  padding: 0 0 24px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+  background: #111;
+  color: white;
+  padding: 65px 24px 35px;
+}
+
+.footer-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: 40px;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer p {
+  color: #999;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 50px;
+  padding-top: 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================================
+   EVENTS
+   ========================================= */
+
+.events-page {
+  padding: 70px 24px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.event-card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+/* =========================================
+   NOT FOUND
+   ========================================= */
+
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.not-found a {
+  color: #574bdc;
+}
+
+/* =========================================
+   VISA DESTINATION PAGE
+   ========================================= */
+
+.new-visa-page {
+  background: #fff;
+  color: #151515;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.destination-hero {
+  position: relative;
+  width: min(1200px, calc(100% - 48px));
+  height: 500px;
+  margin: 20px auto 0;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.destination-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.destination-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,.48),
+    rgba(0,0,0,.70)
+  );
+}
+
+.destination-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  width: min(700px, 90%);
+}
+
+.hero-event-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.event-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #eee;
+  color: #5b50df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  margin-left: -6px;
+}
+
+.destination-kicker {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.destination-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+.destination-hero h1 span {
+  color: #63ff88;
+}
+
+.destination-event-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+.destination-event-date,
+.destination-delivery {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.hero-service-fee {
+  width: 330px;
+  max-width: 100%;
+  margin: 22px auto 7px;
+  padding: 11px;
+  background: rgba(73, 120, 35, .75);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.hero-apply-button {
+  width: 330px;
+  max-width: 100%;
+  border: 0;
+  border-radius: 30px;
+  padding: 15px;
+  background: white;
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Destination tabs */
+
+.visa-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #eee;
+}
+
+.visa-tabs-inner {
+  width: min(1100px, calc(100% - 48px));
+  min-height: 72px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.visa-tabs a {
+  text-decoration: none;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tabs-apply {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.tabs-apply span {
+  font-size: 11px;
+  text-align: right;
+  line-height: 1.3;
+}
+
+.tabs-apply button {
+  border: 0;
+  border-radius: 25px;
+  background: #574bdc;
+  color: white;
+  padding: 12px 25px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Destination sections */
+
+.visa-section-container {
+  width: min(1000px, calc(100% - 48px));
+  margin: auto;
+}
+
+.visa-info-section,
+.documents-section,
+.process-section,
+.why-modern-section,
+.reviews-section,
+.modern-faq-section {
+  padding: 85px 0;
+}
+
+.section-title-block {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.section-title-block.centered {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title-block p {
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #6258df;
+  margin-bottom: 12px;
+}
+
+.section-title-block h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 0 0 15px;
+}
+
+.section-title-block span {
+  color: #707070;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.visa-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.visa-info-card {
+  padding: 25px 20px;
+  border-right: 1px solid #ddd;
+}
+
+.visa-info-card:last-child {
+  border-right: 0;
+}
+
+.visa-info-card span,
+.delivery-copy span,
+.delivery-date span {
+  display: block;
+  color: #888;
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.visa-info-card strong {
+  font-size: 16px;
+}
+
+/* Delivery */
+
+.delivery-card {
+  margin-top: 35px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #f5f5f2;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.delivery-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delivery-copy {
+  flex: 1;
+}
+
+.delivery-copy h3 {
+  font-size: 21px;
+  margin: 5px 0;
+}
+
+.delivery-copy p {
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.delivery-date {
+  text-align: right;
+}
+
+/* Documents */
+
+.document-modern-list {
+  border-top: 1px solid #ddd;
+}
+
+.document-modern-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 35px;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.document-number {
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.document-modern-item h3 {
+  font-size: 17px;
+  margin: 0 0 6px;
+}
+
+.document-modern-item p {
+  color: #777;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.document-check {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Process */
+
+.process-section,
+.reviews-section {
+  background: #f7f7f5;
+}
+
+.process-modern-grid,
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.process-modern-card {
+  min-height: 270px;
+  padding: 26px;
+  background: white;
+  border-radius: 20px;
+}
+
+.process-modern-card > span {
+  font-size: 11px;
+  color: #999;
+  font-weight: 700;
+}
+
+.process-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #f0efff;
+  color: #564adb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 0 20px;
+}
+
+.process-modern-card h3 {
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.process-modern-card p,
+.benefit-card p {
+  color: #777;
+  line-height: 1.5;
+}
+
+/* Benefits */
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.benefit-card {
+  padding: 24px;
+  border: 1px solid #e3e3e3;
+  border-radius: 18px;
+}
+
+.benefit-card > div {
+  font-size: 24px;
+  margin-bottom: 45px;
+  color: #574bdc;
+}
+
+.benefit-card h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+/* Reviews */
+
+.review-card {
+  background: white;
+  padding: 27px;
+  border-radius: 20px;
+}
+
+.review-stars {
+  color: #584cdc;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.review-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.review-card strong {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Guarantee */
+
+.guarantee-section {
+  padding: 80px 24px;
+}
+
+.guarantee-card {
+  width: min(1000px, 100%);
+  margin: auto;
+  border-radius: 25px;
+  background: #151515;
+  color: white;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.guarantee-card p,
+.application-card-modern p {
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.guarantee-card h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 40px;
+  line-height: 1.05;
+  margin: 0 0 15px;
+}
+
+.guarantee-card span {
+  color: #aaa;
+}
+
+.guarantee-card button {
+  border: 0;
+  background: white;
+  color: #111;
+  border-radius: 28px;
+  padding: 15px 28px;
+  font-weight: 700;
+}
+
+/* FAQ */
+
+.modern-faq-list {
+  border-top: 1px solid #ddd;
+}
+
+.modern-faq-item {
+  border-bottom: 1px dashed #ddd;
+}
+
+.modern-faq-item button {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  padding: 24px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.faq-symbol {
+  font-size: 23px;
+}
+
+.modern-faq-answer {
+  padding: 0 40px 24px 0;
+  color: #707070;
+  line-height: 1.6;
+}
+
+/* Application */
+
+.application-section {
+  padding: 20px 24px 75px;
+}
+
+.application-card-modern {
+  width: min(1000px, 100%);
+  margin: auto;
+  padding: 45px;
+  border-radius: 25px;
+  background: #f1f0ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.application-card-modern p {
+  color: #6258df;
+}
+
+.application-card-modern h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 38px;
+  line-height: 1.05;
+  margin: 0 0 10px;
+}
+
+.application-card-modern span {
+  color: #777;
+}
+
+.application-button {
+  text-decoration: none;
+  background: #564adb;
+  color: white;
+  padding: 15px 28px;
+  border-radius: 28px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.back-destination {
+  padding: 0 24px 60px;
+  text-align: center;
+}
+
+.back-destination a {
+  color: #555;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .destination-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid,
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filters-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .filter-box:nth-child(2) {
+    border-right: 0;
+  }
+
+  .how-grid,
+  .process-modern-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .navbar {
+    height: 65px;
+    padding: 0 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .home-hero {
+    min-height: 430px;
+  }
+
+  .home-hero h1 {
+    font-size: 58px;
+  }
+
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .destination-controls {
+    flex-direction: column;
+  }
+
+  .destination-hero {
+    width: calc(100% - 24px);
+    height: 440px;
+    margin-top: 12px;
+    border-radius: 20px;
+  }
+
+  .destination-hero h1 {
+    font-size: 43px;
+  }
+
+  .visa-tabs-inner {
+    width: calc(100% - 24px);
+    overflow-x: auto;
+    gap: 22px;
+  }
+
+  .visa-tabs a {
+    white-space: nowrap;
+  }
+
+  .tabs-apply {
+    display: none;
+  }
+
+  .visa-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .delivery-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .delivery-date {
+    width: 100%;
+    text-align: left;
+    margin-left: 70px;
+  }
+
+  .benefits-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guarantee-card,
+  .application-card-modern {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px;
+  }
+
+  .guarantee-card h2,
+  .application-card-modern h2 {
+    font-size: 32px;
+  }
+}
+/* =========================================
+   FIX EXISTING HOMEPAGE SECTIONS
+   ========================================= */
+
+/* FAQ */
+.faq-section {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 90px 24px;
+}
+
+.faq-section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 0 0 35px;
+}
+
+.faq-list {
+  width: 100%;
+  border-top: 1px solid #dedede;
+}
+
+.faq-item {
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+}
+
+.faq-question {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  min-height: 70px;
+  padding: 22px 4px;
+  margin: 0;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: none;
+  background: transparent !important;
+  color: #111 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faq-question:hover {
+  background: transparent !important;
+}
+
+.faq-plus {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.faq-answer {
+  padding: 0 45px 24px 4px;
+  color: #707070;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   FOOTER FIX
+   ========================================= */
+
+.footer {
+  width: 100%;
+  background: #111;
+  color: white;
+  padding: 70px 24px 30px;
+}
+
+.footer-container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer h3,
+.footer h4 {
+  margin: 0 0 18px;
+}
+
+.footer a {
+  display: block;
+  width: fit-content;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 11px;
+  line-height: 1.4;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer p {
+  color: #999;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.footer-bottom {
+  width: 100%;
+  margin-top: 50px;
+  padding-top: 22px;
+  border-top: 1px solid #333;
+  color: #777;
+  font-size: 13px;
+}
+
+/* =========================================
+   WHY VISAGO FIX
+   ========================================= */
+
+.why-section {
+  width: 100%;
+  padding: 90px 24px;
+}
+
+.why-container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.why-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.why-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 52px;
+  font-weight: 500;
+  line-height: 1.05;
+  margin: 0 0 18px;
+}
+
+.why-heading p {
+  color: #777;
+  line-height: 1.6;
+}
+
+.why-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.why-card {
+  min-height: 190px;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: white;
+}
+
+.why-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.why-card p {
+  margin: 0;
+  color: #777;
+  line-height: 1.5;
+}
+
+/* =========================================
+   TRUST STATS FIX
+   ========================================= */
+
+.trust-stats {
+  width: 100%;
+  padding: 55px 24px;
+}
+
+.trust-stats > div {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.trust-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.trust-stat {
+  padding: 20px 30px;
+  border-right: 1px solid #ddd;
+}
+
+.trust-stat:last-child {
+  border-right: 0;
+}
+
+.trust-stat strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.trust-stat span {
+  color: #777;
+  font-size: 14px;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+  .faq-section {
+    padding: 65px 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 40px;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-stat {
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .why-grid,
+  .trust-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section h2 {
+    font-size: 36px;
+  }
+}
+/* ================================
+   FAQ — FORCE STYLING
+   ================================ */
+
+.faq-section,
+section.faq-section {
+  display: block !important;
+  width: min(1050px, calc(100% - 48px)) !important;
+  max-width: 1050px !important;
+  margin: 0 auto !important;
+  padding: 90px 0 !important;
+  background: #fff !important;
+}
+
+.faq-section .section-heading,
+.faq-section .faq-heading {
+  margin-bottom: 40px !important;
+}
+
+.faq-section h2 {
+  display: block !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 52px !important;
+  line-height: 1.05 !important;
+  font-weight: 500 !important;
+  margin: 0 0 35px !important;
+  color: #111 !important;
+}
+
+.faq-list,
+.faq-section .faq-list {
+  display: block !important;
+  width: 100% !important;
+  border-top: 1px solid #dedede !important;
+}
+
+.faq-item,
+.faq-section .faq-item {
+  display: block !important;
+  width: 100% !important;
+  border-bottom: 1px solid #dedede !important;
+}
+
+.faq-question,
+.faq-section .faq-question {
+  appearance: none !important;
+  -webkit-appearance: none !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+
+  width: 100% !important;
+  min-height: 70px !important;
+
+  padding: 22px 4px !important;
+  margin: 0 !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: none !important;
+
+  background: transparent !important;
+  color: #111 !important;
+
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+
+  text-align: left !important;
+  cursor: pointer !important;
+}
+
+.faq-question:hover,
+.faq-section .faq-question:hover {
+  background: #fafafa !important;
+}
+
+.faq-plus,
+.faq-section .faq-plus {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+
+  border: 1px solid #d8d8d8 !important;
+  border-radius: 50% !important;
+
+  background: white !important;
+  color: #111 !important;
+
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.faq-answer,
+.faq-section .faq-answer {
+  display: block !important;
+  padding: 0 50px 25px 4px !important;
+
+  color: #707070 !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+}
+
+/* ================================
+   FOOTER — FORCE STYLING
+   ================================ */
+
+.footer {
+  display: block !important;
+  width: 100% !important;
+  background: #111 !important;
+  color: white !important;
+  padding: 70px 24px 30px !important;
+}
+
+.footer-container {
+  width: min(1050px, 100%) !important;
+  margin: 0 auto !important;
+}
+
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 2fr 1fr 1fr 1fr !important;
+  gap: 50px !important;
+}
+
+.footer a {
+  display: block !important;
+  color: #aaa !important;
+  text-decoration: none !important;
+  margin-bottom: 10px !important;
+}
+
+.footer a:hover {
+  color: white !important;
+}
+
+.footer p {
+  color: #999 !important;
+  line-height: 1.6 !important;
+}
+
+.footer-bottom {
+  margin-top: 50px !important;
+  padding-top: 22px !important;
+  border-top: 1px solid #333 !important;
+  color: #777 !important;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .faq-section,
+  section.faq-section {
+    width: calc(100% - 40px) !important;
+    padding: 60px 0 !important;
+  }
+
+  .faq-section h2 {
+    font-size: 38px !important;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+/* =========================================
+   HOMEPAGE FAQ — MATCH FAQ.jsx
+   ========================================= */
+
+.faq-home-section {
+  width: 100%;
+  background: #fff;
+  padding: 100px 24px;
+}
+
+.faq-home-container {
+  width: min(1050px, 100%);
+  margin: 0 auto;
+}
+
+.faq-home-heading {
+  margin-bottom: 45px;
+}
+
+.faq-home-heading .eyebrow {
+  margin-bottom: 16px;
+}
+
+.faq-home-heading h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 56px;
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  color: #111;
+}
+
+.faq-home-list {
+  width: 100%;
+  border-top: 1px solid #dedede;
+}
+
+.faq-home-item {
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+}
+
+.faq-home-question {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 100%;
+  min-height: 72px;
+
+  padding: 20px 4px;
+  margin: 0;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+
+  background: transparent !important;
+  color: #111 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.faq-home-question:hover {
+  background: #fafafa !important;
+}
+
+.faq-home-question span:first-child {
+  padding-right: 25px;
+}
+
+.faq-home-plus {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+
+  background: #fff;
+  color: #111;
+
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.faq-home-answer {
+  padding: 0 55px 25px 4px;
+}
+
+.faq-home-answer p {
+  margin: 0;
+  max-width: 750px;
+
+  color: #707070;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* =========================================
+   VISAGO FOOTER
+   RECREATED FROM REFERENCE LAYOUT
+   ========================================= */
+
+.site-footer {
+  width: 100%;
+  background: #ffffff;
+  color: #252525;
+  padding: 55px 0 25px;
+  border-top: 1px solid #eeeeee;
+}
+
+.site-footer .footer-container {
+  width: min(1340px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   TOP
+   ========================================= */
+
+.site-footer .footer-top {
+  display: grid;
+  grid-template-columns:
+    minmax(280px, 1.25fr)
+    minmax(180px, 0.9fr)
+    minmax(250px, 1.15fr)
+    minmax(230px, 1fr);
+
+  column-gap: 75px;
+  align-items: start;
+}
+
+
+/* =========================================
+   BRAND
+   ========================================= */
+
+.site-footer .footer-brand {
+  padding-right: 20px;
+}
+
+.site-footer .footer-logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  margin-bottom: 25px;
+}
+
+.site-footer .footer-logo span {
+  color: #574bdc;
+}
+
+.site-footer .footer-description {
+  margin: 0;
+  max-width: 310px;
+
+  color: #666;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+
+/* =========================================
+   AI
+   ========================================= */
+
+.site-footer .footer-ai-title {
+  margin: 28px 0 13px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+.site-footer .footer-ai-icons {
+  display: flex;
+  gap: 9px;
+}
+
+.site-footer .ai-icon {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 12px;
+  background: #f5f5f5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: #555;
+}
+
+
+/* =========================================
+   WALL OF LOVE
+   ========================================= */
+
+.site-footer .footer-wall {
+  margin-top: 25px;
+
+  font-size: 14px;
+  color: #555;
+}
+
+.site-footer .footer-reviews {
+  display: flex;
+  align-items: center;
+
+  margin-top: 12px;
+}
+
+.site-footer .review-avatar {
+  width: 28px;
+  height: 28px;
+
+  margin-left: -4px;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.site-footer .review-avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-one {
+  background: #f2b9c4;
+}
+
+.avatar-two {
+  background: #c6b9e8;
+}
+
+.avatar-three {
+  background: #b9d8c0;
+}
+
+.avatar-four {
+  background: #e0c99a;
+}
+
+.site-footer .footer-reviews > span {
+  margin-left: 10px;
+
+  font-size: 14px;
+  color: #555;
+}
+
+
+/* =========================================
+   APP STORE BUTTONS
+   ========================================= */
+
+.site-footer .footer-store-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 38px;
+}
+
+.site-footer .store-button {
+  height: 36px;
+  min-width: 105px;
+
+  padding: 4px 10px;
+
+  border-radius: 5px;
+  background: #050505;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 10px;
+}
+
+.site-footer .store-button strong {
+  display: block;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.site-footer .store-small {
+  display: block;
+  font-size: 7px;
+  line-height: 1;
+}
+
+.site-footer .play-symbol {
+  font-size: 15px;
+}
+
+
+/* =========================================
+   COLUMNS
+   ========================================= */
+
+.site-footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.site-footer .footer-column h4 {
+  margin: 0 0 18px;
+
+  color: #707070;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.site-footer .footer-column a {
+  display: block;
+
+  margin: 0 0 8px;
+
+  color: #4e4e4e;
+  text-decoration: none;
+
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.site-footer .footer-column a:hover {
+  color: #111;
+}
+
+
+/* =========================================
+   OFFICES
+   ========================================= */
+
+.site-footer .office {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: #4e4e4e;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.site-footer .office-icon {
+  flex-shrink: 0;
+
+  font-size: 19px;
+  line-height: 1.2;
+}
+
+
+/* =========================================
+   BOTTOM
+   ========================================= */
+
+.site-footer .footer-bottom {
+  margin-top: 45px;
+  padding-top: 22px;
+
+  border-top: 1px solid #e2e2e2;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  color: #888;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1000px) {
+
+  .site-footer .footer-top {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+
+  .site-footer .footer-offices {
+    grid-column: 2 / -1;
+    margin-top: 35px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .site-footer .footer-container {
+    width: calc(100% - 40px);
+  }
+
+  .site-footer .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 45px 30px;
+  }
+
+  .site-footer .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .site-footer .footer-offices {
+    grid-column: auto;
+    margin-top: 0;
+  }
+
+  .site-footer .footer-bottom {
+    flex-direction: column;
+  }
+}
+
+
+@media (max-width: 500px) {
+
+  .site-footer .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer .footer-brand,
+  .site-footer .footer-offices {
+    grid-column: auto;
+  }
+
+  .site-footer .footer-store-buttons {
+    flex-wrap: wrap;
+  }
+}
+/* =========================================
+   VISAGO INFORMATION PAGES
+   ========================================= */
+
+.info-page {
+  background: #fff;
+  min-height: 70vh;
+}
+
+.info-hero {
+  background: #f3f1ff;
+  padding: 120px 24px 110px;
+}
+
+.info-page-inner {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+.info-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(52px, 7vw, 82px);
+  line-height: .98;
+  font-weight: 500;
+  letter-spacing: -3px;
+  margin: 0 0 25px;
+}
+
+.info-subtitle {
+  max-width: 650px;
+  color: #666;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.info-content {
+  padding: 90px 24px;
+}
+
+.info-block {
+  max-width: 760px;
+  padding: 38px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-block:first-child {
+  padding-top: 0;
+}
+
+.info-block h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0 0 14px;
+}
+
+.info-block p {
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .info-hero {
+    padding: 80px 20px;
+  }
+
+  .info-hero h1 {
+    font-size: 52px;
+  }
+
+  .info-content {
+    padding: 65px 20px;
+  }
+}
+/* =========================
+   AUTH / SIGN IN
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+  background: #f5f3ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.auth-card {
+  width: min(460px, 100%);
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 45px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.auth-logo {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #111;
+  margin-bottom: 45px;
+}
+
+.auth-logo span {
+  color: #7657ff;
+}
+
+.auth-heading {
+  margin-bottom: 32px;
+}
+
+.auth-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #7657ff;
+  margin-bottom: 12px;
+}
+
+.auth-heading h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -2px;
+  margin: 0 0 16px;
+  color: #111;
+}
+
+.auth-heading > p:last-child {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.auth-field {
+  margin-bottom: 20px;
+}
+
+.auth-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.auth-field input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dedede;
+  border-radius: 12px;
+  padding: 14px 15px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+  transition: 0.2s ease;
+}
+
+.auth-field input:focus {
+  border-color: #7657ff;
+  box-shadow: 0 0 0 3px rgba(118, 87, 255, 0.1);
+}
+
+.auth-field input::placeholder {
+  color: #aaa;
+}
+
+.auth-submit {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 15px;
+  margin-top: 8px;
+  background: #111;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-submit:hover {
+  background: #7657ff;
+  transform: translateY(-1px);
+}
+
+.auth-error {
+  background: #fff0f0;
+  color: #c62828;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.auth-success {
+  background: #effaf2;
+  color: #27833d;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.auth-switch {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #777;
+}
+
+.auth-switch button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #7657ff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.auth-home {
+  text-align: center;
+  margin: 25px 0 0;
+}
+
+.auth-home a {
+  color: #777;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.auth-home a:hover {
+  color: #7657ff;
+}
+
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 25px 15px;
+  }
+
+  .auth-card {
+    padding: 30px 22px;
+    border-radius: 22px;
+  }
+
+  .auth-heading h1 {
+    font-size: 38px;
+  }
+
+  .auth-logo {
+    margin-bottom: 35px;
+  }
+}
+/* =========================================
+   VISA DESTINATION GRID
+   ========================================= */
+
+.visa-grid {
+  width: 100%;
+  max-width: 1380px;
+  margin: 55px auto 100px;
+
+  display: grid;
+
+  /* 5 CARDS PER ROW */
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* =========================================
+   VISA CARD
+   ========================================= */
+
+.visa-card {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 430px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  background: #e9e9e9;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.visa-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.visa-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+
+.visa-card-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* =========================================
+   TEMPORARY IMAGE PLACEHOLDER
+   ========================================= */
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #e9e7ff,
+      #d8d3ff,
+      #c8c0ff
+    );
+}
+
+
+.image-placeholder span {
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  color: rgba(30, 25, 70, 0.25);
+
+  letter-spacing: -1px;
+}
+
+
+/* =========================================
+   DARK GRADIENT
+   ========================================= */
+
+.visa-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 24px 20px 20px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 25%,
+      rgba(0, 0, 0, 0.12) 45%,
+      rgba(0, 0, 0, 0.88) 100%
+    );
+
+  color: white;
+}
+
+
+/* =========================================
+   COUNTRY
+   ========================================= */
+
+.visa-country {
+  text-align: center;
+
+  margin-bottom: 18px;
+}
+
+
+.country-flag-placeholder {
+  width: 32px;
+  height: 32px;
+
+  margin: 0 auto 10px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: #222;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.visa-country h3 {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 23px;
+
+  line-height: 1.05;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: -0.5px;
+
+  color: white;
+}
+
+
+/* =========================================
+   CARD DETAILS
+   ========================================= */
+
+.visa-card-details {
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+
+  padding-top: 14px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+
+.visa-detail {
+  min-width: 0;
+}
+
+
+.visa-detail span {
+  display: block;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  margin-bottom: 6px;
+}
+
+
+.visa-detail strong {
+  display: block;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: white;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   PLACEHOLDER CARD
+   ========================================= */
+
+.visa-card-placeholder {
+  cursor: default;
+}
+
+
+.visa-card-placeholder:hover {
+  transform: none;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+/*
+   IMPORTANT:
+   Keep 5 cards until 900px.
+   This means your 1024px viewport
+   will ALSO show 5 cards.
+*/
+
+@media (max-width: 900px) {
+
+  .visa-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    width: calc(100% - 40px);
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET / MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .visa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    width: calc(100% - 30px);
+
+    gap: 14px;
+  }
+
+
+  .visa-card {
+    height: 390px;
+
+    border-radius: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 450px) {
+
+  .visa-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .visa-card {
+    height: 420px;
+  }
+
+}
+/* =====================================================
+   VISAGO — ATLYS STYLE HOMEPAGE
+   ===================================================== */
+
+.atlys-style-home {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #111;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.atlys-navbar {
+  width: 100%;
+  height: 150px;
+
+  padding: 0 90px;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+
+  align-items: center;
+
+  background: #fff;
+
+  position: relative;
+  z-index: 100;
+
+  border-bottom: 0;
+}
+
+
+/* LEFT */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+.atlys-logo {
+  position: relative;
+
+  text-decoration: none;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 32px;
+
+  font-weight: 800;
+
+  letter-spacing: -2px;
+
+  color: #111;
+}
+
+
+.atlys-logo span {
+  color: #5b50df;
+}
+
+
+.atlys-logo sup {
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+
+.navbar-divider {
+  width: 1px;
+  height: 40px;
+
+  background: #dedede;
+}
+
+
+.on-time-badge {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 14px;
+
+  line-height: 1.2;
+
+  color: #222;
+}
+
+
+.on-time-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+
+  border: 1px dashed #c9c9c9;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+
+.guaranteed-text {
+  text-decoration: underline;
+
+  margin-top: 3px;
+}
+
+
+/* =====================================================
+   CENTER NAV
+   ===================================================== */
+
+.navbar-center {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 70px;
+
+  height: 100%;
+}
+
+
+.nav-main-item {
+  position: relative;
+
+  height: 100%;
+
+  min-width: 70px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  text-decoration: none;
+
+  color: #737983;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+
+.nav-main-item.active {
+  color: #111;
+}
+
+
+.nav-main-item.active::after {
+  content: "";
+
+  position: absolute;
+
+  bottom: 17px;
+
+  width: 27px;
+  height: 3px;
+
+  border-radius: 10px;
+
+  background: #111;
+}
+
+
+.nav-round-icon {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  background: #f8f8f8;
+}
+
+
+.passport-icon {
+  background: #f7f7f7;
+}
+
+
+.event-icon {
+  background: #faf4ef;
+}
+
+
+/* =====================================================
+   RIGHT NAV
+   ===================================================== */
+
+.navbar-right {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 18px;
+}
+
+
+.country-search {
+  width: 185px;
+  height: 45px;
+
+  border: 1px solid #222;
+
+  border-radius: 25px;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 17px;
+
+  color: #707782;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+.search-icon {
+  font-size: 21px;
+  color: #444;
+}
+
+
+.profile-button {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border: 1px solid #dedede;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 19px;
+
+  color: #333;
+}
+
+
+/* =====================================================
+   FILTER AREA
+   ===================================================== */
+
+.atlys-filter-section {
+  width: 100%;
+
+  padding: 20px 24px 60px;
+
+  background: white;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.atlys-filters {
+  width: min(970px, 100%);
+
+  height: 75px;
+
+  border: 1px solid #dedede;
+
+  border-radius: 40px;
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.08);
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  background: #fff;
+
+  overflow: hidden;
+}
+
+
+.atlys-filter {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 25px;
+
+  border-right: 1px solid #e1e1e1;
+
+  min-width: 0;
+}
+
+
+.atlys-filter:last-child {
+  border-right: 0;
+}
+
+
+.filter-icon {
+  width: 25px;
+  height: 25px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.delivery-icon {
+  background: #35ce75;
+  color: white;
+}
+
+
+.type-icon {
+  background: #567cf0;
+  color: white;
+}
+
+
+.documents-icon {
+  background: #f3a64a;
+  color: white;
+}
+
+
+.holiday-icon {
+  background: #ef5285;
+  color: white;
+}
+
+
+.filter-text {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  gap: 3px;
+}
+
+
+.filter-label {
+  font-size: 13px;
+
+  color: #747981;
+
+  white-space: nowrap;
+}
+
+
+.atlys-filter select {
+  appearance: auto;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  padding: 0;
+
+  margin: 0;
+
+  color: #111;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  min-width: 120px;
+}
+
+
+.atlys-filter input[type="date"] {
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  padding: 0;
+
+  color: #111;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  width: 130px;
+}
+
+
+/* =====================================================
+   DESTINATIONS
+   ===================================================== */
+
+.atlys-destinations {
+  width: 100%;
+
+  padding: 0 90px 100px;
+
+  background: white;
+}
+
+
+/* Hide old search controls visually */
+
+.destination-tools {
+  display: none;
+}
+
+
+.visa-grid {
+  width: 100%;
+
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* ============================= */
+/* VISA CARD */
+/* ============================= */
+
+.visa-card {
+  position: relative;
+  height: 460px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: white;
+  background: #18181d;
+  isolation: isolate;
+}
+
+/* ============================= */
+/* FULL BACKGROUND IMAGE */
+/* ============================= */
+
+.visa-card-image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.visa-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s ease;
+}
+
+.visa-card:hover .visa-card-image img {
+  transform: scale(1.06);
+}
+
+/* ============================= */
+/* IMAGE GRADIENT */
+/* ============================= */
+
+.visa-card-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02) 0%,
+      rgba(0, 0, 0, 0.08) 28%,
+      rgba(0, 0, 0, 0.28) 52%,
+      rgba(10, 10, 15, 0.9) 82%,
+      rgba(10, 10, 15, 0.98) 100%
+    );
+}
+
+/* ============================= */
+/* CARD CONTENT */
+/* ============================= */
+
+.visa-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 24px;
+}
+
+/* ============================= */
+/* COUNTRY */
+/* ============================= */
+
+.visa-country {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.visa-country h3 {
+  margin: 0;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+/* ============================= */
+/* FLAG CIRCLE */
+/* ============================= */
+
+.country-flag-placeholder {
+  width: 42px;
+  height: 42px;
+
+  flex: 0 0 42px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 3px 10px rgba(0, 0, 0, 0.22);
+
+  border: 2px solid rgba(255,255,255,0.9);
+}
+
+.country-flag-placeholder img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.country-flag-placeholder span {
+  color: #222;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* ============================= */
+/* DETAILS LINE */
+/* ============================= */
+
+.visa-card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  border-top: 1px solid rgba(255,255,255,0.28);
+
+  padding-top: 14px;
+
+  gap: 12px;
+}
+
+.visa-detail {
+  min-width: 0;
+}
+
+.visa-detail span {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.11em;
+
+  color: rgba(255,255,255,0.64);
+
+  margin-bottom: 6px;
+}
+
+.visa-detail strong {
+  display: block;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ============================= */
+/* PLACEHOLDER */
+/* ============================= */
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e7e5ff,
+      #77758c
+    );
+
+  color: rgba(255,255,255,0.55);
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 700px) {
+  .visa-card {
+    height: 400px;
+    border-radius: 24px;
+  }
+
+  .visa-card-overlay {
+    padding: 20px;
+  }
+
+  .visa-country h3 {
+    font-size: 20px;
+  }
+
+  .country-flag-placeholder {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+}
+/* =========================================================
+   VISAGO — ON TIME GUARANTEED
+   ATLYS-STYLE EDITORIAL PAGE
+   ========================================================= */
+
+.otg-page {
+  width: 100%;
+  overflow: hidden;
+  background: #fff3e4;
+  color: #1d5ff5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.otg-page * {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.otg-header {
+  height: 82px;
+  width: 100%;
+  padding: 0 11%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 20;
+}
+
+.otg-logo,
+.footer-logo {
+  text-decoration: none;
+  color: #111;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.otg-logo span,
+.footer-logo span {
+  color: #245ff5;
+}
+
+.otg-logo sup,
+.footer-logo sup {
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+.otg-header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.otg-guarantee-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #245ff5;
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1.05;
+}
+
+.otg-guarantee-link strong {
+  font-weight: 700;
+}
+
+.otg-shield-small {
+  width: 27px;
+  height: 30px;
+  border: 2px solid #245ff5;
+  border-radius: 9px 9px 12px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.otg-profile {
+  text-decoration: none;
+  color: #245ff5;
+  font-size: 30px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.otg-hero {
+  height: 820px;
+  background: #205ff5;
+  color: white;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.otg-mini-logo {
+  position: absolute;
+  top: 190px;
+
+  color: white;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -2px;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.otg-mini-logo span {
+  color: white;
+}
+
+.otg-mini-logo small {
+  font-size: 10px;
+  line-height: .9;
+  letter-spacing: -.3px;
+  margin-left: 4px;
+  margin-top: 3px;
+  text-align: left;
+}
+
+.otg-hero h1 {
+  margin: 100px 0 0;
+
+  font-size: clamp(100px, 11vw, 205px);
+  line-height: .78;
+  letter-spacing: -10px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.otg-intro {
+  min-height: 290px;
+
+  background: #205ff5;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20%;
+}
+
+.otg-intro p {
+  max-width: 1050px;
+
+  margin: 0;
+
+  text-align: center;
+
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   GENERIC ART SECTION
+   ========================================================= */
+
+.otg-art-section {
+  position: relative;
+  min-height: 850px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.otg-art-section h2 {
+  position: relative;
+  z-index: 5;
+
+  margin: 0;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .85;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CIRCLES
+   ========================================================= */
+
+.circle-art {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle.yellow {
+  width: 340px;
+  height: 340px;
+  background: #ffe276;
+}
+
+.circle.pink {
+  width: 670px;
+  height: 670px;
+  background: #ffa8ad;
+}
+
+.circle.cyan {
+  width: 1000px;
+  height: 1000px;
+  background: #94e6f3;
+}
+
+
+/* =========================================================
+   DELAY
+   ========================================================= */
+
+.delay-section {
+  background: #fff3e4;
+}
+
+.delay-art {
+  transform: translateY(-150px);
+}
+
+.delay-section h2 {
+  transform: translateY(120px);
+}
+
+
+/* =========================================================
+   REFUND / MESSAGE
+   ========================================================= */
+
+.otg-message-section {
+  min-height: 850px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #fff3e4;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding-top: 70px;
+}
+
+.otg-message-section > p {
+  width: min(1000px, 85%);
+
+  position: relative;
+  z-index: 6;
+
+  margin: 0;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.refund-art {
+  top: 100px;
+  height: 750px;
+}
+
+.refund-art .pink {
+  width: 670px;
+  height: 670px;
+}
+
+.refund-art .yellow {
+  width: 340px;
+  height: 340px;
+}
+
+
+/* =========================================================
+   TIMEFRAME
+   ========================================================= */
+
+.timeframe-section {
+  min-height: 1000px;
+
+  background: #fff3e4;
+
+  align-items: flex-start;
+  padding-top: 50px;
+}
+
+.timeframe-section h2 {
+  margin-top: 0;
+  z-index: 7;
+}
+
+.timeframe-section p {
+  position: absolute;
+
+  top: 410px;
+
+  z-index: 8;
+
+  width: min(1100px, 80%);
+
+  margin: 0;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.timeframe-art {
+  top: 180px;
+  height: 820px;
+}
+
+.timeframe-art .cyan {
+  width: 1000px;
+  height: 1000px;
+}
+
+.timeframe-art .pink {
+  width: 590px;
+  height: 590px;
+}
+
+.timeframe-art .yellow {
+  width: 230px;
+  height: 230px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.otg-status-section {
+  min-height: 1000px;
+
+  position: relative;
+
+  background: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.status-outer-circle {
+  width: 1250px;
+  height: 1250px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.status-cyan {
+  width: 920px;
+  height: 920px;
+
+  border-radius: 50%;
+
+  background: #94e6f3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-pink {
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+
+  background: #ffa8ad;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-yellow {
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+
+  background: #ffe276;
+}
+
+.status-content {
+  position: absolute;
+
+  width: 1000px;
+
+  text-align: center;
+
+  z-index: 10;
+}
+
+.status-content h2 {
+  margin: 0 0 65px;
+
+  color: #205ff5;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .85;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.status-content p {
+  width: 850px;
+
+  margin: auto;
+
+  color: #205ff5;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MISSED COMMITMENTS
+   ========================================================= */
+
+.otg-missed-section {
+  min-height: 1050px;
+
+  background: #fff3e4;
+
+  padding: 130px 10% 120px;
+
+  position: relative;
+}
+
+.missed-heading {
+  text-align: center;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+.missed-heading h2 {
+  margin: 0;
+
+  color: #205ff5;
+
+  font-size: clamp(80px, 8vw, 150px);
+  line-height: .82;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.missed-heading p {
+  max-width: 1050px;
+
+  margin: 55px auto 0;
+
+  color: #205ff5;
+
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.missed-heading p + p {
+  margin-top: 45px;
+}
+
+
+/* =========================================================
+   MISSED STACK
+   ========================================================= */
+
+.missed-stack {
+  width: 480px;
+
+  margin: 100px auto 0;
+
+  position: relative;
+}
+
+.missed-card {
+  height: 105px;
+
+  border-radius: 20px;
+
+  background: #2e7ff6;
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+
+  padding: 17px;
+
+  position: relative;
+
+  margin-bottom: 10px;
+
+  box-shadow:
+    0 0 0 8px rgba(46,127,246,.35),
+    0 0 0 16px rgba(46,127,246,.12);
+}
+
+.missed-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #2e7ff6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.missed-info {
+  margin-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.missed-info strong {
+  font-size: 16px;
+}
+
+.missed-info span {
+  font-size: 14px;
+}
+
+.missed-time {
+  margin-left: auto;
+
+  align-self: flex-start;
+
+  margin-top: 10px;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+}
+
+.card-two {
+  margin-top: 10px;
+}
+
+.card-three {
+  margin-top: 10px;
+}
+
+
+/* =========================================================
+   FINAL BLUE SECTION
+   ========================================================= */
+
+.otg-final {
+  height: 850px;
+
+  background: #2e7ff6;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.final-shield {
+  width: 180px;
+  height: 205px;
+
+  border: 9px solid white;
+
+  clip-path: polygon(
+    50% 0%,
+    88% 18%,
+    88% 60%,
+    50% 100%,
+    12% 60%,
+    12% 18%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 75px;
+  font-weight: 800;
+
+  margin-bottom: 65px;
+}
+
+.otg-final h2 {
+  margin: 0;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .8;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.otg-footer {
+  min-height: 620px;
+
+  padding: 100px 9% 60px;
+
+  background: white;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    1fr
+    1.2fr
+    1fr;
+
+  gap: 80px;
+
+  color: #444;
+}
+
+.footer-brand {
+  max-width: 350px;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  margin-bottom: 25px;
+}
+
+.footer-brand > p {
+  font-size: 16px;
+  line-height: 1.6;
+
+  color: #5f5f63;
+}
+
+.footer-ai {
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
+
+.ai-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.ai-icons span {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 13px;
+
+  background: #f3f3f3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.wall-love {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0;
+}
+
+.wall-love span {
+  width: 34px;
+  height: 34px;
+
+  margin-right: -4px;
+
+  border-radius: 50%;
+
+  border: 2px solid #333;
+
+  background: #f1ccd2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+.wall-love span:nth-child(2) {
+  background: #d9cef0;
+}
+
+.wall-love span:nth-child(3) {
+  background: #cce8d3;
+}
+
+.wall-love span:nth-child(4) {
+  background: #e8dfc4;
+}
+
+.wall-love label {
+  margin-left: 15px;
+
+  font-size: 14px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 45px;
+}
+
+.store-buttons div {
+  background: #111;
+  color: white;
+
+  border-radius: 7px;
+
+  padding: 8px 14px;
+
+  font-size: 11px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.footer-column h4 {
+  margin: 0 0 15px;
+
+  color: #777;
+
+  font-size: 16px;
+}
+
+.footer-column a {
+  color: #444;
+
+  text-decoration: none;
+
+  font-size: 15px;
+}
+
+.footer-column a:hover {
+  color: #205ff5;
+}
+
+.footer-column p {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .otg-header {
+    padding: 0 5%;
+  }
+
+  .otg-hero {
+    height: 700px;
+  }
+
+  .otg-mini-logo {
+    top: 130px;
+  }
+
+  .otg-intro {
+    padding: 60px 8%;
+  }
+
+  .otg-intro p,
+  .otg-message-section > p,
+  .timeframe-section p,
+  .status-content p,
+  .missed-heading p {
+    font-size: 21px;
+  }
+
+  .circle.yellow {
+    width: 270px;
+    height: 270px;
+  }
+
+  .circle.pink {
+    width: 520px;
+    height: 520px;
+  }
+
+  .circle.cyan {
+    width: 760px;
+    height: 760px;
+  }
+
+  .status-outer-circle {
+    width: 950px;
+    height: 950px;
+  }
+
+  .status-cyan {
+    width: 700px;
+    height: 700px;
+  }
+
+  .status-pink {
+    width: 390px;
+    height: 390px;
+  }
+
+  .status-content {
+    width: 800px;
+  }
+
+  .status-content p {
+    width: 650px;
+  }
+
+  .otg-footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   CLOSE HOMEPAGE MOBILE MEDIA QUERY
+   ========================================================= */
+
+@media (max-width: 650px) {
+
+  .atlys-navbar {
+    height: 75px;
+    padding: 0 18px;
+  }
+
+  .navbar-divider,
+  .on-time-badge {
+    display: none;
+  }
+
+  .atlys-logo {
+    font-size: 26px;
+  }
+
+  .country-search {
+    display: none;
+  }
+
+  .atlys-filter-section {
+    padding: 20px 15px 35px;
+  }
+
+  .atlys-filters {
+    grid-template-columns: 1fr;
+    border-radius: 22px;
+  }
+
+  .atlys-filter {
+    border-right: 0;
+    min-height: 65px;
+  }
+
+  .atlys-destinations {
+    padding: 0 15px 60px;
+  }
+
+  .visa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .visa-card {
+    height: 360px;
+    border-radius: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .visa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-card {
+    height: 420px;
+  }
+
+}
+
+
+/* =========================================================
+   VISAGO — ON TIME GUARANTEED
+   ========================================================= */
+
+.otg-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #fff3e4;
+  color: #205ff5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.otg-page *,
+.otg-page *::before,
+.otg-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.otg-header {
+  width: 100%;
+  height: 82px;
+  padding: 0 11%;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 100;
+}
+
+.otg-logo {
+  text-decoration: none;
+  color: #111111;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.otg-logo span {
+  color: #245ff5;
+}
+
+.otg-logo sup {
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+.otg-header-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.otg-guarantee-link {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #245ff5;
+  text-decoration: none;
+
+  font-size: 13px;
+  line-height: 1.05;
+}
+
+.otg-guarantee-link strong {
+  font-weight: 700;
+}
+
+.otg-shield-small {
+  width: 27px;
+  height: 30px;
+
+  border: 2px solid #245ff5;
+  border-radius: 9px 9px 12px 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+.otg-profile {
+  color: #245ff5;
+  text-decoration: none;
+  font-size: 30px;
+  line-height: 1;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.otg-hero {
+  width: 100%;
+  height: 820px;
+  min-height: 820px;
+
+  background: #205ff5;
+  color: #ffffff;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+.otg-mini-logo {
+  position: absolute;
+  top: 190px;
+
+  display: flex;
+  align-items: flex-start;
+
+  color: #ffffff;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.otg-mini-logo span {
+  color: #ffffff;
+}
+
+.otg-mini-logo small {
+  margin-left: 4px;
+  margin-top: 3px;
+
+  color: #ffffff;
+
+  font-size: 10px;
+  line-height: .9;
+  letter-spacing: -.3px;
+
+  text-align: left;
+}
+
+.otg-hero h1 {
+  margin: 100px 0 0;
+
+  color: #ffffff;
+
+  font-size: clamp(100px, 11vw, 205px);
+  line-height: .78;
+  letter-spacing: -10px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.otg-intro {
+  width: 100%;
+  min-height: 290px;
+
+  background: #205ff5;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 20%;
+}
+
+.otg-intro p {
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  text-align: center;
+
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   GENERIC ART
+   ========================================================= */
+
+.otg-art-section {
+  width: 100%;
+  min-height: 850px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #fff3e4;
+}
+
+.otg-art-section h2 {
+  margin: 0;
+
+  position: relative;
+  z-index: 10;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .85;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   CIRCLES
+   ========================================================= */
+
+.circle-art {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle.yellow {
+  width: 340px;
+  height: 340px;
+  background: #ffe276;
+}
+
+.circle.pink {
+  width: 670px;
+  height: 670px;
+  background: #ffa8ad;
+}
+
+.circle.cyan {
+  width: 1000px;
+  height: 1000px;
+  background: #94e6f3;
+}
+
+
+/* =========================================================
+   DELAY
+   ========================================================= */
+
+.delay-section {
+  min-height: 850px;
+  background: #fff3e4;
+}
+
+.delay-art {
+  transform: translateY(-150px);
+}
+
+.delay-section h2 {
+  transform: translateY(120px);
+}
+
+
+/* =========================================================
+   MESSAGE
+   ========================================================= */
+
+.otg-message-section {
+  width: 100%;
+  min-height: 850px;
+
+  position: relative;
+  overflow: hidden;
+
+  background: #fff3e4;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 70px;
+}
+
+.otg-message-section > p {
+  width: min(1000px, 85%);
+
+  position: relative;
+  z-index: 10;
+
+  margin: 0;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.refund-art {
+  top: 100px;
+  height: 750px;
+}
+
+.refund-art .pink {
+  width: 670px;
+  height: 670px;
+}
+
+.refund-art .yellow {
+  width: 340px;
+  height: 340px;
+}
+
+
+/* =========================================================
+   TIMEFRAME
+   ========================================================= */
+
+.timeframe-section {
+  min-height: 1000px;
+  padding-top: 50px;
+
+  background: #fff3e4;
+
+  align-items: flex-start;
+}
+
+.timeframe-section h2 {
+  position: relative;
+  z-index: 10;
+}
+
+.timeframe-section p {
+  width: min(1100px, 80%);
+
+  position: absolute;
+  top: 410px;
+  z-index: 12;
+
+  margin: 0;
+
+  color: #205ff5;
+
+  text-align: center;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.timeframe-art {
+  top: 180px;
+  height: 820px;
+}
+
+.timeframe-art .cyan {
+  width: 1000px;
+  height: 1000px;
+}
+
+.timeframe-art .pink {
+  width: 590px;
+  height: 590px;
+}
+
+.timeframe-art .yellow {
+  width: 230px;
+  height: 230px;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.otg-status-section {
+  width: 100%;
+  min-height: 1000px;
+
+  position: relative;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.status-outer-circle {
+  width: 1250px;
+  height: 1250px;
+
+  border-radius: 50%;
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.status-cyan {
+  width: 920px;
+  height: 920px;
+
+  border-radius: 50%;
+  background: #94e6f3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-pink {
+  width: 520px;
+  height: 520px;
+
+  border-radius: 50%;
+  background: #ffa8ad;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-yellow {
+  width: 190px;
+  height: 190px;
+
+  border-radius: 50%;
+  background: #ffe276;
+}
+
+.status-content {
+  width: 1000px;
+
+  position: absolute;
+  z-index: 20;
+
+  text-align: center;
+}
+
+.status-content h2 {
+  margin: 0 0 65px;
+
+  color: #205ff5;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .85;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.status-content p {
+  width: 850px;
+  max-width: 85%;
+
+  margin: auto;
+
+  color: #205ff5;
+
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   MISSED COMMITMENTS
+   ========================================================= */
+
+.otg-missed-section {
+  width: 100%;
+  min-height: 1050px;
+
+  position: relative;
+
+  background: #fff3e4;
+
+  padding: 130px 10% 120px;
+}
+
+.missed-heading {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.missed-heading h2 {
+  margin: 0;
+
+  color: #205ff5;
+
+  font-size: clamp(80px, 8vw, 150px);
+  line-height: .82;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+.missed-heading p {
+  width: min(1050px, 100%);
+
+  margin: 55px auto 0;
+
+  color: #205ff5;
+
+  font-size: 27px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.missed-heading p + p {
+  margin-top: 45px;
+}
+
+
+/* =========================================================
+   MISSED CARDS
+   ========================================================= */
+
+.missed-stack {
+  width: 480px;
+  max-width: 100%;
+
+  margin: 100px auto 0;
+
+  position: relative;
+}
+
+.missed-card {
+  width: 100%;
+  height: 105px;
+
+  margin-bottom: 12px;
+
+  padding: 17px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 20px;
+
+  background: #2e7ff6;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 0 rgba(46,127,246,.35),
+    0 16px 0 rgba(46,127,246,.12);
+}
+
+.missed-avatar {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #2e7ff6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 800;
+}
+
+.missed-info {
+  margin-left: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+.missed-info strong {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.missed-info span {
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.missed-time {
+  margin-left: auto;
+  align-self: flex-start;
+  margin-top: 10px;
+
+  color: #ffffff;
+
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.card-two,
+.card-three {
+  margin-top: 12px;
+}
+
+
+/* =========================================================
+   FINAL BLUE
+   ========================================================= */
+
+.otg-final {
+  width: 100%;
+  height: 850px;
+
+  background: #2e7ff6;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.final-shield {
+  width: 180px;
+  height: 205px;
+
+  margin-bottom: 65px;
+
+  border: 9px solid #ffffff;
+
+  clip-path: polygon(
+    50% 0%,
+    88% 18%,
+    88% 60%,
+    50% 100%,
+    12% 60%,
+    12% 18%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 75px;
+  font-weight: 800;
+}
+
+.otg-final h2 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(75px, 8vw, 145px);
+  line-height: .8;
+  letter-spacing: -7px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.otg-footer {
+  width: 100%;
+  min-height: 620px;
+
+  padding: 100px 9% 60px;
+
+  background: #ffffff;
+  color: #444444;
+
+  display: grid;
+
+  grid-template-columns:
+    1.4fr
+    1fr
+    1.2fr
+    1fr;
+
+  gap: 80px;
+}
+
+.otg-footer .footer-brand {
+  max-width: 350px;
+}
+
+.otg-footer .footer-logo {
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  color: #111111;
+  text-decoration: none;
+
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.otg-footer .footer-logo span {
+  color: #245ff5;
+}
+
+.otg-footer .footer-logo sup {
+  font-size: 12px;
+}
+
+.otg-footer .footer-brand > p {
+  margin: 0;
+
+  color: #5f5f63;
+
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.otg-footer .footer-ai {
+  margin-top: 25px !important;
+  margin-bottom: 12px !important;
+}
+
+.otg-footer .ai-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.otg-footer .ai-icons span {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 13px;
+
+  background: #f3f3f3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.otg-footer .wall-love {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+}
+
+.otg-footer .wall-love span {
+  width: 34px;
+  height: 34px;
+
+  margin-right: -4px;
+
+  border-radius: 50%;
+  border: 2px solid #333333;
+
+  background: #f1ccd2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+.otg-footer .wall-love span:nth-child(2) {
+  background: #d9cef0;
+}
+
+.otg-footer .wall-love span:nth-child(3) {
+  background: #cce8d3;
+}
+
+.otg-footer .wall-love span:nth-child(4) {
+  background: #e8dfc4;
+}
+
+.otg-footer .wall-love label {
+  margin-left: 15px;
+
+  color: #555555;
+
+  font-size: 14px;
+}
+
+.otg-footer .store-buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 45px;
+}
+
+.otg-footer .store-buttons div {
+  padding: 8px 14px;
+
+  border-radius: 7px;
+
+  background: #111111;
+  color: #ffffff;
+
+  font-size: 11px;
+}
+
+.otg-footer .footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+.otg-footer .footer-column h4 {
+  margin: 0 0 15px;
+
+  color: #777777;
+
+  font-size: 16px;
+}
+
+.otg-footer .footer-column a {
+  color: #444444;
+
+  text-decoration: none;
+
+  font-size: 15px;
+}
+
+.otg-footer .footer-column a:hover {
+  color: #205ff5;
+}
+
+.otg-footer .footer-column p {
+  margin: 0;
+
+  color: #444444;
+
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .otg-header {
+    padding: 0 5%;
+  }
+
+  .otg-hero {
+    height: 700px;
+    min-height: 700px;
+  }
+
+  .otg-mini-logo {
+    top: 130px;
+  }
+
+  .otg-intro {
+    padding: 60px 8%;
+  }
+
+  .otg-intro p,
+  .otg-message-section > p,
+  .timeframe-section p,
+  .status-content p,
+  .missed-heading p {
+    font-size: 21px;
+  }
+
+  .circle.yellow {
+    width: 270px;
+    height: 270px;
+  }
+
+  .circle.pink {
+    width: 520px;
+    height: 520px;
+  }
+
+  .circle.cyan {
+    width: 760px;
+    height: 760px;
+  }
+
+  .status-outer-circle {
+    width: 950px;
+    height: 950px;
+  }
+
+  .status-cyan {
+    width: 700px;
+    height: 700px;
+  }
+
+  .status-pink {
+    width: 390px;
+    height: 390px;
+  }
+
+  .status-content {
+    width: 800px;
+  }
+
+  .status-content p {
+    width: 650px;
+  }
+
+  .otg-footer {
+    grid-template-columns: 1.2fr 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 650px) {
+
+  .otg-header {
+    height: 70px;
+    padding: 0 18px;
+  }
+
+  .otg-logo {
+    font-size: 25px;
+  }
+
+  .otg-guarantee-link {
+    display: none;
+  }
+
+  .otg-hero {
+    height: 650px;
+    min-height: 650px;
+  }
+
+  .otg-mini-logo {
+    top: 100px;
+    font-size: 22px;
+  }
+
+  .otg-hero h1 {
+    margin-top: 80px;
+
+    font-size: 72px;
+
+    letter-spacing: -4px;
+  }
+
+  .otg-intro {
+    min-height: 300px;
+    padding: 50px 25px;
+  }
+
+  .otg-intro p,
+  .otg-message-section > p,
+  .timeframe-section p,
+  .status-content p,
+  .missed-heading p {
+    font-size: 17px;
+  }
+
+  .otg-art-section {
+    min-height: 650px;
+  }
+
+  .otg-art-section h2,
+  .status-content h2 {
+    font-size: 60px;
+    letter-spacing: -4px;
+  }
+
+  .circle.yellow {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle.pink {
+    width: 420px;
+    height: 420px;
+  }
+
+  .circle.cyan {
+    width: 600px;
+    height: 600px;
+  }
+
+  .otg-message-section {
+    min-height: 700px;
+  }
+
+  .timeframe-section {
+    min-height: 750px;
+  }
+
+  .timeframe-section p {
+    top: 370px;
+    width: 88%;
+  }
+
+  .timeframe-art {
+    top: 180px;
+  }
+
+  .status-outer-circle {
+    width: 700px;
+    height: 700px;
+  }
+
+  .status-cyan {
+    width: 520px;
+    height: 520px;
+  }
+
+  .status-pink {
+    width: 290px;
+    height: 290px;
+  }
+
+  .status-yellow {
+    width: 120px;
+    height: 120px;
+  }
+
+  .status-content {
+    width: 90%;
+  }
+
+  .status-content p {
+    width: 85%;
+  }
+
+  .otg-status-section {
+    min-height: 750px;
+  }
+
+  .otg-missed-section {
+    padding: 90px 20px;
+  }
+
+  .missed-heading h2 {
+    font-size: 62px;
+    letter-spacing: -4px;
+  }
+
+  .missed-stack {
+    width: 100%;
+  }
+
+  .missed-card {
+    height: 90px;
+    padding: 12px;
+  }
+
+  .missed-info strong {
+    font-size: 12px;
+  }
+
+  .missed-info span {
+    font-size: 10px;
+  }
+
+  .missed-time {
+    font-size: 10px;
+  }
+
+  .otg-final {
+    height: 650px;
+  }
+
+  .final-shield {
+    width: 125px;
+    height: 145px;
+    font-size: 50px;
+  }
+
+  .otg-final h2 {
+    font-size: 65px;
+    letter-spacing: -4px;
+  }
+
+  .otg-footer {
+    grid-template-columns: 1fr;
+    gap: 50px;
+
+    padding: 70px 25px;
+  }
+}
+.country-flag-placeholder {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.country-flag-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.country-flag-placeholder span {
+  font-size: 16px;
+  font-weight: 700;
+}
+/* =========================================
+   DESTINATIONS SECTION - FINAL UI
+========================================= */
+
+.popular-destinations {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  padding: 45px 32px 90px;
+}
+
+
+/* HEADER */
+
+.destinations-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 24px;
+}
+
+.section-eyebrow {
+  margin-bottom: 6px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+  color: #333;
+}
+
+.destinations-header h2 {
+  margin: 0;
+
+  font-size: 32px;
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -0.04em;
+
+  color: #111;
+}
+
+.destination-count {
+  font-size: 14px;
+  color: #777;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.visa-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.visa-card {
+  position: relative;
+
+  width: 100%;
+  height: 390px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  text-decoration: none;
+  color: white;
+
+  background: #222;
+
+  display: block;
+
+  isolation: isolate;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.07);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.visa-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.13);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.visa-card-image {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.visa-card-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s cubic-bezier(.2,.7,.2,1);
+}
+
+.visa-card:hover .visa-card-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #e5e3ff 0%,
+      #a9a7bc 58%,
+      #25252d 100%
+    );
+
+  color: rgba(30,30,50,0.38);
+
+  font-family: Georgia, serif;
+
+  font-size: 22px;
+}
+
+
+/* =========================================
+   GRADIENT
+========================================= */
+
+.visa-card-gradient {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 18%,
+      rgba(0,0,0,0.03) 32%,
+      rgba(0,0,0,0.20) 54%,
+      rgba(8,8,12,0.76) 79%,
+      rgba(8,8,12,0.96) 100%
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.visa-card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  padding: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+}
+
+
+/* =========================================
+   COUNTRY
+========================================= */
+
+.visa-country {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 16px;
+}
+
+.visa-country h3 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   FLAG CIRCLE
+========================================= */
+
+.country-flag-placeholder {
+  width: 38px;
+  height: 38px;
+
+  min-width: 38px;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.96);
+
+  border: 2px solid rgba(255,255,255,0.95);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 3px 10px rgba(0,0,0,0.22);
+}
+
+.country-flag-placeholder img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+.country-flag-placeholder span {
+  color: #222;
+
+  font-size: 14px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.visa-card-details {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 10px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.28);
+
+  padding-top: 12px;
+}
+
+.visa-detail {
+  min-width: 0;
+}
+
+.visa-detail span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.10em;
+
+  color:
+    rgba(255,255,255,0.62);
+}
+
+.visa-detail strong {
+  display: block;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  color: white;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   LOADING / ERROR
+========================================= */
+
+.destination-message {
+  padding: 60px 0;
+
+  text-align: center;
+
+  color: #777;
+
+  font-size: 16px;
+}
+
+.destination-message.error {
+  color: #c33;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+  .visa-grid {
+    grid-template-columns:
+      repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 950px) {
+  .visa-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+  .popular-destinations {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .visa-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .visa-card {
+    height: 350px;
+    border-radius: 22px;
+  }
+
+  .popular-destinations {
+    padding-top: 30px;
+  }
+
+  .destinations-header h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 500px) {
+  .visa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-card {
+    height: 390px;
+  }
+
+  .destinations-header {
+    align-items: flex-start;
+    gap: 8px;
+    flex-direction: column;
+  }
+}
+/* Reduce excessive space below filter bar */
+
+.visa-filters-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.filters-container {
+  margin-bottom: 0 !important;
+}
+
+.visa-filters {
+  margin-bottom: 0 !important;
+}
+
+/* =========================================================
+   VISAGO FINAL OVERRIDES
+   Keeps the existing component styles above intact while
+   resolving conflicting/duplicate legacy rules.
+   ========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* ---------------------------------------------------------
+   MAIN NAVBAR
+   --------------------------------------------------------- */
+
+.atlys-navbar {
+  width: 100%;
+  min-height: 150px;
+  height: 150px;
+  padding: 0 90px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.atlys-navbar a {
+  text-decoration: none;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  min-width: 0;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  height: 100%;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.nav-main-item {
+  color: #737983;
+}
+
+.nav-main-item:hover {
+  color: #111;
+}
+
+.nav-main-item.active {
+  color: #111;
+}
+
+.on-time-badge {
+  color: #222;
+}
+
+.on-time-active {
+  color: #111;
+}
+
+/* ---------------------------------------------------------
+   HOMEPAGE FILTER / DESTINATION SPACING
+   --------------------------------------------------------- */
+
+.atlys-filter-section {
+  padding-bottom: 30px;
+}
+
+.atlys-destinations {
+  padding-top: 0;
+}
+
+/* ---------------------------------------------------------
+   DESTINATION GRID
+   5 cards on desktop, then responsive breakpoints.
+   --------------------------------------------------------- */
+
+.popular-destinations {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 35px 32px 90px;
+}
+
+.destinations-header {
+  width: 100%;
+}
+
+.visa-grid {
+  width: 100%;
+  max-width: 1380px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Prevent old generic .visa-card rules from changing the
+   current full-image VisaCard design. */
+
+.visa-card {
+  position: relative;
+  width: 100%;
+  height: 430px;
+  display: block;
+  overflow: hidden;
+  border: 0;
+  border-radius: 28px;
+  background: #18181d;
+  color: #fff;
+  text-decoration: none;
+  isolation: isolate;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.visa-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+}
+
+.visa-card-placeholder {
+  cursor: default;
+}
+
+.visa-card-placeholder:hover {
+  transform: none;
+}
+
+/* Full-card image */
+.visa-card-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.visa-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.visa-card-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.visa-card-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Flag */
+.country-flag-placeholder {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.96);
+  border: 2px solid rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.country-flag-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Keep the card text above the background image and make
+   only the surrounding Link clickable. */
+.visa-country,
+.visa-card-details {
+  pointer-events: none;
+}
+
+/* ---------------------------------------------------------
+   DESTINATION DATA MESSAGES
+   --------------------------------------------------------- */
+
+.destination-message {
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: #777;
+  font-size: 16px;
+}
+
+.destination-message.error {
+  color: #c33;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE GRID
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+  .atlys-navbar {
+    padding: 0 42px;
+  }
+
+  .visa-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .visa-card {
+    height: 390px;
+  }
+}
+
+@media (max-width: 900px) {
+  .atlys-navbar {
+    min-height: 95px;
+    height: 95px;
+    padding: 0 28px;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  }
+
+  .navbar-center {
+    gap: 26px;
+  }
+
+  .nav-round-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .nav-main-item {
+    min-width: 58px;
+    font-size: 14px;
+  }
+
+  .country-search {
+    width: 160px;
+  }
+
+  .visa-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .visa-card {
+    height: 390px;
+  }
+
+  .popular-destinations {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .atlys-navbar {
+    min-height: 82px;
+    height: 82px;
+    padding: 0 18px;
+  }
+
+  .navbar-center {
+    gap: 10px;
+  }
+
+  .nav-main-item {
+    min-width: 52px;
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  .nav-round-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+
+  .visa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .visa-card {
+    height: 350px;
+    border-radius: 22px;
+  }
+
+  .popular-destinations {
+    padding: 30px 18px 70px;
+  }
+}
+
+@media (max-width: 550px) {
+  .atlys-navbar {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .navbar-center {
+    gap: 8px;
+  }
+
+  .navbar-left {
+    gap: 10px;
+  }
+
+  .atlys-logo {
+    font-size: 25px;
+  }
+
+  .nav-round-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .nav-main-item.active::after {
+    bottom: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar-center {
+    gap: 4px;
+  }
+
+  .nav-main-item {
+    min-width: 46px;
+  }
+
+  .visa-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visa-card {
+    height: 420px;
+  }
+}
+/* =========================================================
+   COMPACT FOOTER - ATLYS STYLE
+========================================================= */
+
+.site-footer {
+  width: 100%;
+  background: #ffffff;
+  padding: 38px 0 18px !important;
+  border-top: 1px solid #eeeeee;
+}
+
+.site-footer .footer-container {
+  width: min(1340px, calc(100% - 80px)) !important;
+  max-width: 1340px !important;
+  margin: 0 auto !important;
+}
+
+/* MAIN FOUR COLUMNS */
+
+.site-footer .footer-top {
+  display: grid !important;
+
+  grid-template-columns:
+    1.2fr
+    0.9fr
+    1.05fr
+    1fr !important;
+
+  column-gap: 60px !important;
+  row-gap: 0 !important;
+
+  align-items: start;
+}
+
+/* BRAND */
+
+.site-footer .footer-brand {
+  padding-right: 10px !important;
+}
+
+.site-footer .footer-logo {
+  font-size: 29px !important;
+  margin-bottom: 22px !important;
+  line-height: 1 !important;
+}
+
+.site-footer .footer-description {
+  max-width: 290px !important;
+  margin: 0 !important;
+
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+}
+
+/* AI */
+
+.site-footer .footer-ai-title {
+  margin: 22px 0 10px !important;
+
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+}
+
+.site-footer .footer-ai-icons {
+  gap: 7px !important;
+}
+
+.site-footer .ai-icon {
+  width: 42px !important;
+  height: 42px !important;
+
+  border-radius: 11px !important;
+  font-size: 18px !important;
+}
+
+/* WALL OF LOVE */
+
+.site-footer .footer-wall {
+  margin-top: 21px !important;
+  font-size: 14px !important;
+}
+
+.site-footer .footer-reviews {
+  margin-top: 9px !important;
+}
+
+.site-footer .review-avatar {
+  width: 27px !important;
+  height: 27px !important;
+}
+
+/* COLUMN HEADINGS */
+
+.site-footer .footer-column h4,
+.site-footer .footer-offices h4 {
+  margin: 0 0 18px !important;
+
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+
+  color: #666 !important;
+  font-weight: 600 !important;
+}
+
+/* COMPANY + PRODUCTS LINKS */
+
+.site-footer .footer-column {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.site-footer .footer-column a {
+  display: block !important;
+
+  margin: 0 0 18px !important;
+
+  padding: 0 !important;
+
+  color: #4e4e4e !important;
+
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+
+  text-decoration: none !important;
+}
+
+.site-footer .footer-column a:last-child {
+  margin-bottom: 0 !important;
+}
+
+.site-footer .footer-column a:hover {
+  color: #111 !important;
+}
+
+/* OFFICES */
+
+.site-footer .footer-offices {
+  padding-left: 0 !important;
+}
+
+.site-footer .office {
+  display: flex !important;
+  align-items: flex-start !important;
+
+  gap: 10px !important;
+
+  margin-bottom: 18px !important;
+
+  color: #4e4e4e !important;
+
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+}
+
+.site-footer .office:last-child {
+  margin-bottom: 0 !important;
+}
+
+.site-footer .office-icon {
+  flex-shrink: 0 !important;
+
+  font-size: 16px !important;
+  line-height: 1.3 !important;
+}
+
+/* APP STORE BUTTONS */
+
+.site-footer .footer-store-buttons {
+  display: flex !important;
+  gap: 12px !important;
+
+  margin-top: 28px !important;
+}
+
+.site-footer .store-button {
+  height: 32px !important;
+
+  padding: 0 13px !important;
+
+  border-radius: 6px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  background: #111 !important;
+  color: #fff !important;
+
+  font-size: 11px !important;
+  line-height: 1 !important;
+}
+
+/* BOTTOM */
+
+.site-footer .footer-bottom {
+  margin-top: 30px !important;
+  padding-top: 16px !important;
+
+  border-top: 1px solid #e2e2e2 !important;
+
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+
+  gap: 20px !important;
+
+  color: #888 !important;
+  font-size: 12px !important;
+}
+
+/* =========================================================
+   DESKTOP HEIGHT CONTROL
+========================================================= */
+
+@media (min-width: 1200px) {
+  .site-footer {
+    padding-top: 25px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .site-footer .footer-column a {
+    margin-bottom: 8px !important;
+  }
+
+  .site-footer .footer-offices .office {
+    margin-bottom: 16px !important;
+  }
+
+  .site-footer .footer-bottom {
+    margin-top: 25px !important;
+    padding-top: 14px !important;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .site-footer .footer-top {
+    grid-template-columns:
+      1.2fr
+      1fr
+      1fr !important;
+  }
+
+  .site-footer .footer-offices {
+    grid-column: auto !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .site-footer {
+    padding: 35px 0 18px !important;
+  }
+
+  .site-footer .footer-container {
+    width: calc(100% - 40px) !important;
+  }
+
+  .site-footer .footer-top {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 35px 25px !important;
+  }
+
+  .site-footer .footer-brand {
+    grid-column: 1 / -1 !important;
+  }
+
+  .site-footer .footer-offices {
+    grid-column: auto !important;
+  }
+
+  .site-footer .footer-bottom {
+    margin-top: 30px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .site-footer .footer-top {
+    grid-template-columns: 1fr !important;
+  }
+
+  .site-footer .footer-brand,
+  .site-footer .footer-offices {
+    grid-column: auto !important;
+  }
+
+  .site-footer .footer-store-buttons {
+    flex-wrap: wrap !important;
+  }
+}
+.view-switcher {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  background: #f2f2f2;
+  padding: 4px;
+  border-radius: 28px;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.view-switcher button {
+  width: 42px;
+  height: 38px;
+  border: none;
+  border-radius: 22px;
+  background: transparent;
+  color: #777;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.view-switcher button:hover {
+  color: #111;
+}
+
+.view-switcher button.active {
+  background: #ffffff;
+  color: #171717;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .view-switcher {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .view-switcher {
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .view-switcher button {
+    width: 46px;
+  }
+}
+.home-content-area {
+  position: relative;
+}
+
+.floating-view-switcher {
+  position: fixed !important;
+  left: 50% !important;
+  bottom: 24px !important;
+  transform: translateX(-50%) !important;
+  z-index: 99999 !important;
+
+  width: 132px;
+  height: 52px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  background: #ffffff !important;
+  border-radius: 28px;
+
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
+
+  border: 1px solid #eeeeee;
+}
+
+.floating-view-switcher button {
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  color: #777;
+
+  cursor: pointer;
+}
+
+.floating-view-switcher button.active {
+  color: #4d50e8;
+  background: #f5f5ff;
+}
+
+.floating-view-switcher button:hover {
+  color: #111;
+}
+
+.floating-view-switcher > span {
+  width: 1px;
+  height: 28px;
+  background: #dddddd;
+  display: block !important;
+}
+
+
