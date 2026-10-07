@@ -202,10 +202,7 @@ function Speed() {
     <div className="speed-page">
       <header className="speed-log-header">
         <div className="speed-log-left">
-          <a href="/" className="speed-logo">
-            visa<span>go</span>
-            <sup>→</sup>
-          </a>
+          <a href="/" className="speed-logo">VYZITS</a>
 
           <span className="speed-slash">/</span>
 
@@ -429,7 +426,7 @@ function Speed() {
 
         <div className="speed-end">
           <span>
-            VISAGO · SHIP LOG · AUTO-PUBLISHED
+            VYZITS · SHIP LOG · AUTO-PUBLISHED
             EVERY DAY AT 23:59 IST
           </span>
 

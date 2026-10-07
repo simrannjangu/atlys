@@ -268,3 +268,68 @@
     font-size: 18px;
   }
 }
+/* ---------- MAP VIEW ---------- */
+.map-mode .atlys-filter-section { padding-top: 28px; }
+
+.vm-wrap {
+  position: relative;
+  margin: 24px 40px 110px;
+  border-radius: 36px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 10px 34px rgba(0,0,0,.07);
+}
+.vm-map {
+  width: 100%;
+  height: calc(100vh - 190px);
+  min-height: 520px;
+  background: #aad3df;
+  z-index: 0;
+}
+
+.vm-badge {
+  position: absolute; top: 16px; left: 16px; z-index: 500;
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-radius: 999px; background: #fff;
+  font-size: 11px; font-weight: 800; letter-spacing: .08em;
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+}
+.vm-badge i { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+
+.vm-state {
+  position: absolute; inset: 0; z-index: 600;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.75); color: #555; font-size: 16px; text-align: center; padding: 20px;
+}
+.vm-error { color: #c33; }
+
+/* markers */
+.vm-marker { background: transparent; border: 0; }
+.vm-pill {
+  position: absolute; left: 0; top: 0;
+  transform: translate(-50%, -50%);
+  display: flex; align-items: center; gap: 10px;
+  padding: 6px 18px 6px 6px;
+  background: #fff; border-radius: 999px; white-space: nowrap;
+  box-shadow: 0 6px 18px rgba(0,0,0,.18);
+  cursor: pointer; transition: transform .2s ease;
+}
+.vm-pill:hover { transform: translate(-50%, -50%) scale(1.08); }
+.vm-code {
+  width: 34px; height: 34px; border-radius: 50%; background: #f1f1f3;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; font-weight: 600; color: #222;
+}
+.vm-text { display: flex; flex-direction: column; gap: 2px; }
+.vm-text strong { font-size: 12px; color: #222; }
+.vm-text small { font-size: 11px; font-weight: 700; color: #222; letter-spacing: .02em; }
+
+/* zoomed out: only the round code badge */
+.vm-zoom-low .vm-text { display: none; }
+.vm-zoom-low .vm-pill { padding: 4px; }
+.vm-zoom-low .vm-code { width: 30px; height: 30px; font-size: 12px; }
+
+@media (max-width: 700px) {
+  .vm-wrap { margin: 16px 12px 110px; border-radius: 24px; }
+  .vm-map { height: calc(100vh - 260px); }
+}

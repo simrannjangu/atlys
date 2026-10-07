@@ -15,14 +15,9 @@ function PopularDestinations() {
         setError("");
 
         const response = await fetch(VISA_API);
-
-        if (!response.ok) {
-          throw new Error(`API error: ${response.status}`);
-        }
+        if (!response.ok) throw new Error(`API error: ${response.status}`);
 
         const data = await response.json();
-
-        console.log("VISAS API:", data);
 
         const list = Array.isArray(data)
           ? data
@@ -51,36 +46,12 @@ function PopularDestinations() {
 
   return (
     <section className="popular-destinations">
-      <div className="destinations-header">
-        <div>
-          <div className="section-eyebrow">EXPLORE</div>
+      {loading && <div className="destination-message">Loading destinations...</div>}
 
-          <h2>Popular destinations</h2>
-        </div>
-
-        {!loading && !error && (
-          <div className="destination-count">
-            {destinations.length} destinations
-          </div>
-        )}
-      </div>
-
-      {loading && (
-        <div className="destination-message">
-          Loading destinations...
-        </div>
-      )}
-
-      {error && (
-        <div className="destination-message error">
-          {error}
-        </div>
-      )}
+      {error && <div className="destination-message error">{error}</div>}
 
       {!loading && !error && destinations.length === 0 && (
-        <div className="destination-message">
-          No destinations available.
-        </div>
+        <div className="destination-message">No destinations available.</div>
       )}
 
       {!loading && !error && destinations.length > 0 && (

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const API_URL = "https://atlys-backend-cr9i.onrender.com/api/defence/applications";
 
@@ -59,22 +60,6 @@ function Styles() {
         position:static;
         background:#fff;
         border-bottom:1px solid #eeeeef;
-      }
-
-      .df-logo{
-        font-size:30px;
-        font-weight:700;
-        letter-spacing:-1.5px;
-        color:#fff;
-        text-decoration:none;
-      }
-
-      .solid .df-logo{
-        color:#111;
-      }
-
-      .df-logo span{
-        color:#7777ff;
       }
 
       .df-nav a.link{
@@ -516,10 +501,6 @@ function Styles() {
           padding:20px 22px;
         }
 
-        .df-logo{
-          font-size:27px;
-        }
-
         .df-hero{
           min-height:82vh;
           padding:120px 22px 90px;
@@ -602,9 +583,7 @@ function Styles() {
 
 const Nav = ({ solid }) => (
   <header className={`df-nav ${solid ? "solid" : ""}`}>
-    <Link to="/" className="df-logo">
-      visa<span>go</span>
-    </Link>
+   <Logo size="sm" />
 
     <Link to="/sign-in" className="link">
       Sign in

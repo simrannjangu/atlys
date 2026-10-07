@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 /* ------------------------------------------------------------------
    1. API CONFIG  – change these to match your news API
@@ -303,11 +304,9 @@ function Newsroom() {
       `}</style>
 
       {/* Header */}
-      <header className="nr-header">
-        <Link to="/" className="nr-logo" aria-label="VisaGo home">
-          visa<span>go</span>
-        </Link>
-      </header>
+     <header className="nr-header">
+  <Logo size="sm" />
+</header>
 
       <main>
         {/* Intro */}

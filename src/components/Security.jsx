@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "./Security.css";
+import Logo from "./Logo";
 
 const documents = [
   {
@@ -42,7 +43,7 @@ const features = [
   },
   {
     title: "Secure Payments",
-    text: "VisaGo is designed to use secure payment practices and appropriate safeguards when handling payment transactions.",
+    text: "VYZITS is designed to use secure payment practices and appropriate safeguards when handling payment transactions.",
     point: "Helps protect financial information during transactions.",
   },
   {
@@ -52,7 +53,7 @@ const features = [
   },
   {
     title: "End-to-End Encryption",
-    text: "Data transmitted between users and VisaGo should travel through protected connections to help prevent unauthorized access.",
+    text: "Data transmitted between users and VYZITS should travel through protected connections to help prevent unauthorized access.",
     point: "Helps protect information during transmission.",
   },
   {
@@ -67,7 +68,7 @@ const features = [
   },
   {
     title: "User Education and Awareness",
-    text: "VisaGo encourages users to understand how to protect their information and recognize potential security threats.",
+    text: "VYZITS encourages users to understand how to protect their information and recognize potential security threats.",
     point: "Helps users take an active role in protecting personal information.",
   },
 ];
@@ -99,7 +100,7 @@ function Security() {
   return (
     <div className="security-page" ref={pageRef}>
       <header className="security-topbar">
-        <div className="security-brand">VISAGO</div>
+       <div className="security-brand"><Logo size="sm" to={null} /></div>
 
         <div className="security-nav-title">
           <span></span>
@@ -128,7 +129,7 @@ function Security() {
             </h1>
 
             <p>
-              Customers worldwide trust VisaGo to look after
+              Customers worldwide trust VYZITS to look after
               sensitive documents throughout their visa journey.
             </p>
           </div>
@@ -285,13 +286,13 @@ function Security() {
             <h2>
               Help us keep
               <br />
-              VisaGo secure.
+              VYZITS secure.
             </h2>
           </div>
 
           <div className="disclosure-intro security-reveal">
             <p>
-              At VisaGo, the security of our users and partners
+              At VYZITS, the security of our users and partners
               is important to us. We welcome reports of genuine
               security issues and appreciate the efforts of the
               security research community in helping us maintain
@@ -300,13 +301,13 @@ function Security() {
 
             <p>
               If you believe you have identified a potential
-              security vulnerability affecting VisaGo services,
+              security vulnerability affecting VYZITS services,
               we encourage you to report it responsibly following
               the guidelines below.
             </p>
 
-            <a href="mailto:security@visago.com">
-              security@visago.com
+            <a href="mailto:security@vyzits.com">
+              security@vyzits.com
               <span>↗</span>
             </a>
           </div>
@@ -369,8 +370,8 @@ function Security() {
 
               <p>
                 This program covers security vulnerabilities
-                affecting VisaGo web applications, APIs and
-                VisaGo-owned infrastructure and services.
+                affecting VYZITS web applications, APIs and
+                VYZITS-owned infrastructure and services.
               </p>
 
               <p>
@@ -378,7 +379,7 @@ function Security() {
                 from compromised user devices or credentials,
                 social engineering or phishing attacks,
                 third-party services or integrations not operated
-                by VisaGo, automated scanner findings without
+                by VYZITS, automated scanner findings without
                 demonstrated impact, or missing security
                 recommendations without exploitability.
               </p>
@@ -398,11 +399,11 @@ function Security() {
                 for validation. Keep vulnerability details
                 confidential until the issue is resolved and do
                 not publicly disclose findings without prior
-                written consent from VisaGo.
+                written consent from VYZITS.
               </p>
 
               <p>
-                VisaGo will review valid reports, communicate
+                VYZITS will review valid reports, communicate
                 respectfully with reporters and take appropriate
                 remediation actions where required.
               </p>
@@ -413,7 +414,7 @@ function Security() {
             <h2>Legal Safe Harbor</h2>
 
             <p>
-              If you follow this policy in good faith, VisaGo
+              If you follow this policy in good faith, VYZITS
               will not initiate legal action against you for
               accidental or unintentional violations related to
               your security research.
@@ -429,12 +430,12 @@ function Security() {
             <h2>Rewards and Bug Bounty</h2>
 
             <p>
-              VisaGo does not currently operate a public bug
+              VYZITS does not currently operate a public bug
               bounty program.
             </p>
 
             <p>
-              In some cases, VisaGo may offer a token of
+              In some cases, VYZITS may offer a token of
               appreciation at its discretion for valid and
               responsibly reported issues. Such tokens are not
               guaranteed and are evaluated based on impact and
@@ -446,15 +447,15 @@ function Security() {
             <h2>Program Updates</h2>
 
             <p>
-              VisaGo reserves the right to modify or terminate
+              VYZITS reserves the right to modify or terminate
               this program at any time without prior notice.
             </p>
 
             <p>
               If you are unsure whether your research aligns
               with this policy, please contact us at
-              <a href="mailto:security@visago.com">
-                {" "}security@visago.com
+              <a href="mailto:security@vyzits.com">
+                {" "}security@vyzits.com
               </a>
               {" "}before proceeding.
             </p>
@@ -463,7 +464,7 @@ function Security() {
 
         <section className="security-footer-section">
           <div className="footer-word security-reveal">
-            VISAGO
+            VYZITS
           </div>
 
           <div className="footer-security-line">
@@ -473,7 +474,7 @@ function Security() {
       </main>
 
       <footer className="security-footer">
-        <span>VISAGO</span>
+        <span>VYZITS</span>
         <span>SECURITY</span>
         <span>
           © {new Date().getFullYear()}

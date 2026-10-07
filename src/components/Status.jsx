@@ -1529,12 +1529,8 @@ export default function StatusTracker() {
 
       <section className="sp-hero">
         <header className="sp-nav">
-          <Link
-            to="/"
-            className="sp-logo"
-            aria-label="VisaGo home"
-          >
-            visa<span>go</span>
+          <Link to="/" className="sp-logo" aria-label="VYZITS home">
+          VYZITS
           </Link>
 
           <div className="sp-nav-r">

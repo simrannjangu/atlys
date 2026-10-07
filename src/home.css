@@ -1,0 +1,674 @@
+/* =========================================================
+   VISAGO HOME — ATLYS LOOK (loaded AFTER App.css)
+   ========================================================= */
+
+/* ---------- NAVBAR ---------- */
+.atlys-navbar {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  padding: 26px 108px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+}
+.atlys-navbar a { text-decoration: none; }
+
+.navbar-left { display: flex; align-items: center; gap: 22px; }
+.atlys-logo {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -2.5px;
+  color: #111;
+  line-height: 1;
+}
+.atlys-logo span { color: #111; }
+.atlys-logo sup { font-size: 16px; margin-left: 2px; vertical-align: super; }
+.navbar-divider { width: 1px; height: 46px; background: #e3e3e3; }
+
+.on-time-badge { display: flex; align-items: center; gap: 12px; color: #111; font-size: 17px; line-height: 1.25; }
+.on-time-icon {
+  width: 46px; height: 46px; border-radius: 50%;
+  border: 1px solid #e2e2e2; background: #fafafa;
+  display: flex; align-items: center; justify-content: center; color: #222;
+}
+.on-time-badge .tl { text-decoration: underline; text-underline-offset: 3px; }
+
+.navbar-center { display: flex; align-items: flex-start; justify-content: center; gap: 44px; height: auto; }
+.nav-main-item {
+  position: relative; height: auto; min-width: 86px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  color: #8a8f98; font-size: 19px; font-weight: 600; padding-bottom: 20px;
+  transition: color .2s;
+}
+.nav-main-item:hover,
+.nav-main-item.active { color: #111; }
+.nav-main-item.active::after {
+  content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);
+  width: 30px; height: 3px; border-radius: 3px; background: #111;
+}
+.nav-round-icon {
+  width: 84px; height: 84px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 38px; background: #f6f6f6;
+}
+.passport-icon { background: #f4f4f6; }
+.event-icon { background: #faf3ec; }
+
+.navbar-right { display: flex; align-items: center; justify-content: flex-end; gap: 18px; }
+.country-search {
+  width: 212px; height: 52px; padding: 0 20px;
+  display: flex; align-items: center; gap: 12px;
+  border: 1.5px solid #111; border-radius: 999px; background: #fff;
+  color: #555; font-size: 16px; font-weight: 600; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+.profile-button {
+  width: 52px; height: 52px; border-radius: 50%;
+  border: 1px solid #e3e3e3; background: #fff; color: #111;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+/* ---------- FILTER BAR ---------- */
+.atlys-filter-section {
+  width: 100%;
+  padding: 24px 24px 0;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+.atlys-filters {
+  width: min(1120px, 100%);
+  height: auto;
+  min-height: 86px;
+  display: flex;
+  align-items: stretch;
+  grid-template-columns: none;
+  overflow: visible;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 999px;
+  box-shadow: 0 10px 34px rgba(0,0,0,.07);
+}
+.atlys-filter {
+  position: relative;
+  flex: 1;
+  display: block;
+  padding: 0;
+  gap: 0;
+  border-right: 0;
+  min-width: 0;
+}
+.atlys-filter + .atlys-filter::before {
+  content: ""; position: absolute; left: 0; top: 50%;
+  height: 44px; width: 1px; transform: translateY(-50%); background: #e6e6e6;
+}
+.atlys-filter-btn {
+  width: 100%; height: 100%; min-height: 86px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 26px; border: 0; background: transparent;
+  text-align: left; cursor: pointer; font-family: inherit;
+  border-radius: 999px;
+}
+.filter-icon {
+  width: 28px; height: 28px; flex-shrink: 0; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 14px; font-weight: 700;
+}
+.delivery-icon  { background: #22c55e; }
+.type-icon      { background: #4f7cf0; }
+.documents-icon { background: #f5a23c; }
+.holiday-icon   { background: #ec4a7e; }
+
+.filter-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.filter-label { font-size: 15px; color: #6f6f6f; white-space: nowrap; }
+.filter-value {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 20px; font-weight: 600; color: #111; white-space: nowrap;
+}
+.af-chevron { transition: transform .2s ease; flex-shrink: 0; }
+.af-chevron.open { transform: rotate(180deg); }
+
+.atlys-menu {
+  position: absolute; top: calc(100% + 14px); left: 16px; min-width: 230px;
+  margin: 0; padding: 8px; list-style: none;
+  background: #fff; border: 1px solid #eee; border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,.12); z-index: 200;
+}
+.atlys-menu button {
+  width: 100%; padding: 11px 14px; border: 0; border-radius: 12px;
+  background: transparent; text-align: left; font-size: 15px; cursor: pointer;
+}
+.atlys-menu button:hover { background: #f4f5f7; }
+.atlys-menu button.selected { background: #eef2ff; color: #3b4be0; font-weight: 600; }
+.atlys-date-menu { padding: 14px; }
+.atlys-date-menu input { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 10px; font-size: 15px; }
+.atlys-date-clear { margin-top: 8px; color: #e0245e; }
+
+/* ---------- DESTINATION GRID ---------- */
+.popular-destinations {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 70px 108px 140px;
+}
+.visa-grid {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* ---------- CARD ---------- */
+.visa-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 38px;
+  overflow: hidden;
+  background: #0b1a2b;
+  color: #fff;
+  text-decoration: none;
+  isolation: isolate;
+  box-shadow: none;
+  transition: transform .3s ease;
+}
+.visa-card:hover { transform: translateY(-6px); box-shadow: none; }
+.visa-card-placeholder:hover { transform: none; }
+
+.visa-card-image { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.visa-card-image img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; transition: transform .6s ease; }
+.visa-card:hover .visa-card-image img { transform: scale(1.05); }
+
+.visa-card-gradient {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 38%,
+    rgba(0,0,0,.45) 62%,
+    rgba(0,0,0,.88) 82%,
+    rgba(0,0,0,.97) 100%
+  );
+}
+.visa-card-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  padding: 0 30px 28px;
+  display: flex; flex-direction: column; justify-content: flex-end; align-items: center;
+  pointer-events: none;
+}
+.visa-country {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 12px; margin-bottom: 20px;
+}
+.country-flag-placeholder {
+  width: 28px; height: 28px; min-width: 28px; border-radius: 50%;
+  overflow: hidden; background: #fff; border: 0; box-shadow: none;
+  display: flex; align-items: center; justify-content: center;
+}
+.country-flag-placeholder img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.country-flag-placeholder span { color: #222; font-size: 12px; font-weight: 800; }
+
+.visa-country h3 {
+  margin: 0; color: #fff; text-align: center;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 26px; font-weight: 600; line-height: 1.05;
+  letter-spacing: 0; text-transform: uppercase;
+}
+
+.visa-card-details {
+  width: 100%;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.18);
+}
+.visa-detail { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.visa-detail:nth-child(2):not(:last-child) { align-items: center; text-align: center; }
+.visa-detail:last-child:not(:first-child) { align-items: flex-end; text-align: right; }
+.visa-detail span {
+  margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .1em;
+  color: rgba(255,255,255,.6); text-transform: uppercase;
+}
+.visa-detail strong {
+  font-size: 14px; font-weight: 800; letter-spacing: .04em;
+  color: #fff; text-transform: uppercase; white-space: nowrap;
+  overflow: visible; text-overflow: clip;
+}
+
+.destination-message {
+  min-height: 180px; display: flex; align-items: center; justify-content: center;
+  color: #777; font-size: 16px;
+}
+.destination-message.error { color: #c33; }
+
+/* ---------- FLOATING VIEW TOGGLE ---------- */
+.floating-view-switcher {
+  width: auto;
+  height: auto;
+  padding: 8px;
+  gap: 6px;
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 10px 34px rgba(0,0,0,.2);
+}
+.floating-view-switcher > span { width: 1px; height: 30px; background: #e4e4e4; }
+.floating-view-switcher button {
+  width: 62px; height: 50px; border-radius: 999px;
+  color: #6b6b6b; background: transparent;
+}
+.floating-view-switcher button.active { color: #2f4bff; background: #eef2ff; }
+.floating-view-switcher button:hover { color: #111; }
+.floating-view-switcher button.active:hover { color: #2f4bff; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1400px) {
+  .atlys-navbar { padding-left: 56px; padding-right: 56px; }
+  .popular-destinations { padding-left: 56px; padding-right: 56px; }
+  .visa-grid { gap: 22px; }
+  .visa-card { height: 460px; }
+}
+@media (max-width: 1200px) {
+  .visa-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 1000px) {
+  .atlys-navbar { padding: 18px 28px 0; }
+  .nav-round-icon { width: 64px; height: 64px; font-size: 28px; }
+  .nav-main-item { font-size: 16px; }
+  .country-search { width: 170px; }
+  .on-time-badge span, .on-time-badge div:not(.on-time-icon) { display: none; }
+  .navbar-divider { display: none; }
+  .visa-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .popular-destinations { padding: 50px 28px 120px; }
+  .atlys-filters { border-radius: 36px; flex-wrap: wrap; }
+  .atlys-filter { flex: 1 1 50%; }
+  .atlys-filter + .atlys-filter::before { display: none; }
+}
+@media (max-width: 700px) {
+  .navbar-center { gap: 12px; }
+  .nav-round-icon { width: 52px; height: 52px; font-size: 22px; }
+  .country-search { display: none; }
+  .atlys-logo { font-size: 28px; }
+  .visa-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .visa-card { height: 380px; border-radius: 26px; }
+  .visa-country h3 { font-size: 20px; }
+  .popular-destinations { padding: 36px 16px 120px; }
+  .atlys-filter { flex: 1 1 100%; }
+  .atlys-filters { border-radius: 24px; }
+}
+@media (max-width: 480px) {
+  .visa-grid { grid-template-columns: 1fr; }
+  .visa-card { height: 440px; }
+}
+/* Scale the whole homepage down to match Atlys proportions */
+@media (min-width: 1001px) {
+  .atlys-style-home {
+    zoom: 0.8;
+  }
+}
+/* ---------- COUNTRY SEARCH ---------- */
+.country-search-wrap { position: relative; }
+
+.country-search {
+  width: 212px;
+  height: 52px;
+  padding: 0 16px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid #111;
+  border-radius: 999px;
+  background: #fff;
+  color: #555;
+  cursor: text;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  transition: width .25s ease, box-shadow .25s ease;
+}
+.country-search.is-open {
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+.country-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+}
+.country-search input::placeholder { color: #555; }
+.country-search-clear {
+  width: 24px; height: 24px; border: 0; border-radius: 50%;
+  background: #eee; color: #444; font-size: 17px; line-height: 1;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 400px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 22px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.16);
+  z-index: 2000;
+}
+.search-state { padding: 22px 16px; text-align: center; color: #777; font-size: 15px; }
+.search-error { color: #c33; }
+
+.search-result {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+}
+.search-result:hover { background: #f4f5f7; }
+.search-result-flag {
+  width: 34px; height: 34px; flex-shrink: 0; border-radius: 50%;
+  overflow: hidden; background: #eee;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: #333;
+}
+.search-result-flag img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.search-result-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.search-result-main strong { font-size: 16px; color: #111; }
+.search-result-main small { font-size: 13px; color: #777; text-transform: uppercase; letter-spacing: .04em; }
+.search-result-fee { font-size: 14px; font-weight: 700; color: #111; }
+
+@media (max-width: 1000px) {
+  .country-search { width: 170px; }
+  .country-search.is-open { width: 240px; }
+  .search-dropdown { width: 340px; }
+}
+@media (max-width: 700px) {
+  .country-search { display: flex; width: 130px; height: 44px; }
+  .country-search.is-open { width: 180px; }
+  .search-dropdown { width: min(340px, calc(100vw - 32px)); }
+}
+/* =========================================================
+   FLAG: perfect circle
+   ========================================================= */
+.country-flag-placeholder {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  max-width: 28px;
+  max-height: 28px;
+  flex: 0 0 28px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  background: #fff;
+  border: 0;
+  display: block;
+  position: relative;
+}
+.country-flag-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+.country-flag-placeholder span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================================================
+   HOVER STATE
+   ========================================================= */
+
+/* the details row and the extra block are stacked at the bottom */
+.visa-card-overlay {
+  justify-content: flex-end;
+}
+
+/* stronger blur + darker gradient appears on hover */
+.visa-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(6, 30, 32, 0.55) 55%,
+    rgba(4, 22, 24, 0.92) 100%
+  );
+  -webkit-backdrop-filter: blur(0px);
+  backdrop-filter: blur(0px);
+  transition: opacity 0.35s ease;
+}
+.visa-card:hover::before {
+  opacity: 1;
+}
+
+/* the extra section: collapsed by default, expands on hover */
+.visa-card-extra {
+  display: grid;
+  grid-template-rows: 0fr;
+  width: 100%;
+  opacity: 0;
+  transition: grid-template-rows 0.35s ease, opacity 0.3s ease;
+}
+.visa-card-extra-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+.visa-card:hover .visa-card-extra {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.visa-extra-docs {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.visa-extra-docs span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.visa-extra-docs strong {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.visa-extra-pill {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* the photo zooms slightly and blurs at the bottom, like Atlys */
+.visa-card .visa-card-image img {
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+.visa-card:hover .visa-card-image img {
+  transform: scale(1.06);
+}
+
+/* keep card from jumping up on hover, Atlys does not lift it */
+.visa-card:hover {
+  transform: none;
+}
+
+/* touch devices have no hover, so always show the extra info */
+@media (hover: none) {
+  .visa-card-extra {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+  .visa-card::before {
+    opacity: 1;
+  }
+}
+/* ---------- FULL-PAGE MAP ---------- */
+.map-mode .popular-destinations { display: none; }
+
+.map-mode .vm-wrap {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.map-mode .vm-map {
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+}
+
+/* the footer starts right after the map */
+.map-mode .home-content-area {
+  padding: 0;
+  margin: 0;
+}
+
+/* zoom buttons and badge stay clear of each other */
+.map-mode .vm-badge {
+  top: 20px;
+  left: 20px;
+}
+
+/* the view switcher floats above the map near the bottom */
+.map-mode .floating-view-switcher {
+  bottom: 28px;
+}
+.map-mode .vm-map {
+  height: 125vh; /* 100vh divided by the 0.8 zoom */
+}
+/* ---------- LOGGED-IN CARD ---------- */
+.auth-user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: #f7f6ff;
+  border-radius: 16px;
+}
+.auth-user-avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+.auth-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.auth-user-info strong { font-size: 16px; color: #111; }
+.auth-user-info span {
+  font-size: 13px;
+  color: #777;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.auth-logout {
+  width: 100%;
+  margin-top: 12px;
+  padding: 15px;
+  border: 1px solid #f0c9c9;
+  border-radius: 12px;
+  background: #fff5f5;
+  color: #c62828;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.auth-logout:hover { background: #c62828; color: #fff; }
+/* ---------- LOGO ---------- */
+.vz-link {
+  display: inline-flex;
+  text-decoration: none;
+  line-height: 0;
+}
+
+.vz-logo {
+  display: block;
+  aspect-ratio: 3 / 2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 0;
+}
+.vz-sm { width: 130px; }
+.vz-md { width: 180px; }
+.vz-lg { width: 240px; }
+
+@media (max-width: 700px) {
+  .vz-md { width: 130px; }
+  .vz-lg { width: 170px; }
+}
+/* Events page: same scale as the home page */
+@media (min-width: 1001px) {
+  .events-root {
+    zoom: 0.8;
+  }
+}
+.atlys-navbar.no-nav { padding-bottom: 20px; }
+.nr-header .vz-sm { width: 105px; }
+.speed-logo { letter-spacing: .18em !important; font-weight: 600; }
+.sp-logo { letter-spacing: .18em; font-size: 24px !important; }

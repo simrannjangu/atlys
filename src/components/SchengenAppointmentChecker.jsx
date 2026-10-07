@@ -20,7 +20,7 @@ const FAQS = [
         <br />
         <br />
         The availability shown on each card reflects the latest data loaded
-        from the VisaGo backend.
+        from the VYZITS backend.
       </>
     ),
   },
@@ -34,7 +34,7 @@ const FAQS = [
         <br />
         <br />
         Use the destination and city filters above to see the slots currently
-        available through VisaGo.
+        available through VYZITS.
       </>
     ),
   },
@@ -43,7 +43,7 @@ const FAQS = [
     answer: (
       <>
         This page currently displays appointment availability returned by the
-        VisaGo Schengen APIs. Booking can be connected to the appointment flow
+        VYZITS Schengen APIs. Booking can be connected to the appointment flow
         separately when the booking endpoint is available.
       </>
     ),
@@ -419,7 +419,7 @@ function SchengenAppointmentChecker() {
 
         <div className="schengen-hero-inner">
           <div className="schengen-breadcrumb">
-            <span>VisaGo</span>
+            <span>VYZITS</span>
             <span>›</span>
             <strong>Schengen appointments</strong>
           </div>
@@ -437,7 +437,7 @@ function SchengenAppointmentChecker() {
 
           <p className="schengen-subtitle">
             Find available appointment slots for Schengen destinations
-            using the latest VisaGo availability data.
+            using the latest VYZITS availability data.
           </p>
 
           <div className="schengen-filter-card">

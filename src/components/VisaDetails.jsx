@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation, useParams } from "react-router-dom";
+import Logo from "./Logo";
 
 const FAQ_API = "https://atlys-backend-cr9i.onrender.com/api/faqs/admin/all";
 
@@ -170,7 +171,7 @@ function VisaDetails() {
 
     setLoading(true);
 
-    fetch("http://192.168.1.12:5000/api/visas")
+    fetch("https://atlys-backend-cr9i.onrender.com/api/visas")
       .then((response) => {
         if (!response.ok) {
           throw new Error(
@@ -1883,12 +1884,7 @@ function VisaDetails() {
 
       <header className="visa-detail-nav">
 
-        <Link
-          to="/"
-          className="visa-detail-logo"
-        >
-          visa<span>go</span>→
-        </Link>
+       <Logo size="sm" />
 
         <div className="visa-detail-nav-right">
 
@@ -2876,11 +2872,7 @@ function VisaDetails() {
         className="visa-detail-footer"
       >
 
-        <div
-          className="visa-detail-footer-logo"
-        >
-          visa<span>go</span>→
-        </div>
+        <Logo size="sm" to={null} />
 
         <div>
           © 2026 VisaGo

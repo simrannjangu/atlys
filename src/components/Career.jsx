@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import * as THREE from "three"; // npm i three
 import "./Career.css";
+import Logo from "./Logo";
 
 /* =====================================================================
    STORY (sab kuch sirf ek baar, order fix):
@@ -645,7 +646,10 @@ function Career() {
       <div ref={barRef} className="bar" aria-hidden="true" />
 
       <header className="nav">
-        <Link to="/" className="logo">visago<i /><span>Careers</span></Link>
+        <span className="logo-wrap" style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+       <Logo size="sm" />
+      <span className="logo" style={{ fontSize: 13, letterSpacing: ".14em", textTransform: "uppercase" }}>Careers</span>
+      </span>
         <nav>
           {NAV.map(([l, f]) => <button key={l} className="nav-link" onClick={() => goTo(f)}>{l}</button>)}
           <button className="ticket" onClick={() => openRole(ROLES[0])}>View open roles <i className="perf" /> ↗</button>

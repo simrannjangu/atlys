@@ -1,4 +1,5 @@
 import "./App.css";
+import "./home.css";
 import {
   BrowserRouter,
   Routes,
@@ -48,28 +49,41 @@ function ScrollToTop() {
 function Home() {
   const [viewMode, setViewMode] = useState("list");
 
+  const changeView = (mode) => {
+    setViewMode(mode);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  };
+
   return (
-    <div className="atlys-style-home">
-      <Navbar />
+    <div
+      className={`atlys-style-home ${viewMode === "map" ? "map-mode" : ""}`}
+    >
+      {/* Navbar and filters only on the list (home) view */}
+      {viewMode === "list" && <Navbar />}
 
       <main>
-        <VisaFilters />
+        {viewMode === "list" && <VisaFilters />}
 
         <div className="home-content-area">
-          {viewMode === "list" ? (
-            <PopularDestinations />
-          ) : (
-            <VisaMap />
-          )}
+          {viewMode === "list" ? <PopularDestinations /> : <VisaMap />}
 
           <div className="floating-view-switcher">
             <button
               type="button"
               className={viewMode === "list" ? "active" : ""}
-              onClick={() => setViewMode("list")}
+              onClick={() => changeView("list")}
               aria-label="List view"
             >
-              ☷
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <rect x="3" y="4" width="4" height="16" rx="1" />
+                <rect x="10" y="4" width="4" height="16" rx="1" />
+                <rect x="17" y="4" width="4" height="16" rx="1" />
+              </svg>
             </button>
 
             <span></span>
@@ -77,10 +91,21 @@ function Home() {
             <button
               type="button"
               className={viewMode === "map" ? "active" : ""}
-              onClick={() => setViewMode("map")}
+              onClick={() => changeView("map")}
               aria-label="Map view"
             >
-              ◈
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinejoin="round"
+              >
+                <path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z" />
+                <path d="M9 4v14M15 6v14" />
+              </svg>
             </button>
           </div>
         </div>

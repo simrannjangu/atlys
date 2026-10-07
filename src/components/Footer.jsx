@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 function Footer() {
   return (
@@ -13,9 +14,7 @@ function Footer() {
           ========================================= */}
           <div className="footer-brand">
 
-            <Link to="/" className="footer-logo">
-              Visa<span>Go</span>
-            </Link>
+            <Logo size="md" />
 
             <p className="footer-description">
               VisaGo helps you plan, apply, and track visas

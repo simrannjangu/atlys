@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
+import Logo from "./Logo";
 
 function OnTimeGuaranteed() {
   const delaySection = useRef(null);
@@ -251,24 +252,7 @@ function OnTimeGuaranteed() {
           z-index: 100;
         }
 
-        .otg-logo {
-          color: #111111;
-          text-decoration: none;
-
-          font-size: 31px;
-          font-weight: 800;
-          letter-spacing: -2px;
-        }
-
-        .otg-logo span {
-          color: #2161f6;
-        }
-
-        .otg-logo sup {
-          font-size: 12px;
-          position: relative;
-          top: -7px;
-        }
+    
 
         .otg-header-right {
           display: flex;
@@ -1253,10 +1237,6 @@ function OnTimeGuaranteed() {
             padding: 0 18px;
           }
 
-          .otg-logo {
-            font-size: 25px;
-          }
-
           .otg-guarantee-link {
             display: none;
           }
@@ -1458,13 +1438,7 @@ function OnTimeGuaranteed() {
 
         <header className="otg-header">
 
-          <Link
-            to="/"
-            className="otg-logo"
-          >
-            visa<span>go</span><sup>→</sup>
-          </Link>
-
+         <Logo size="sm" />
           <div className="otg-header-right">
 
             <Link
@@ -1504,7 +1478,7 @@ function OnTimeGuaranteed() {
 
           <div className="otg-mini-logo">
 
-            visa<span>go</span>
+           VYZITS
 
             <small>
               VISAS ON
@@ -1818,12 +1792,7 @@ function OnTimeGuaranteed() {
 
           <div className="otg-footer-brand">
 
-            <Link
-              to="/"
-              className="otg-footer-logo"
-            >
-              visa<span>go</span><sup>→</sup>
-            </Link>
+           <Logo size="md" />
 
             <p>
               VisaGo helps you plan, apply, and track visas

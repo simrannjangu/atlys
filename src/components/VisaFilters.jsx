@@ -1,13 +1,38 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const OPTIONS = {
+  delivery: ["Any Time", "Fastest", "Standard"],
+  type: ["All Visa Types", "e-Visa", "Sticker", "Visa on Arrival", "No Visa Required"],
+  documents: ["Any Documents", "Passport", "Photo", "Bank Statements", "Income Tax Returns"],
+};
+
+function Chevron({ open }) {
+  return (
+    <svg
+      className={`af-chevron ${open ? "open" : ""}`}
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+}
 
 function VisaFilters() {
   const [visaDelivery, setVisaDelivery] = useState("Any Time");
   const [visaType, setVisaType] = useState("All Visa Types");
   const [documents, setDocuments] = useState("Any Documents");
   const [travelDate, setTravelDate] = useState("");
+  const [openMenu, setOpenMenu] = useState(null);
+  const barRef = useRef(null);
 
   const today = new Date();
-
   const todayString =
     today.getFullYear() +
     "-" +
@@ -15,104 +40,140 @@ function VisaFilters() {
     "-" +
     String(today.getDate()).padStart(2, "0");
 
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (barRef.current && !barRef.current.contains(e.target)) {
+        setOpenMenu(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
+  const toggle = (name) => setOpenMenu((cur) => (cur === name ? null : name));
+
+  const dateLabel = travelDate
+    ? new Date(travelDate + "T00:00:00").toLocaleDateString("en-IN", {
+        day: "numeric",
+        month: "short",
+        year: "numeric",
+      })
+    : "Select Dates";
+
+  const filters = [
+    {
+      key: "delivery",
+      label: "Visa delivery:",
+      icon: "⚡",
+      iconClass: "delivery-icon",
+      value: visaDelivery,
+      set: setVisaDelivery,
+      options: OPTIONS.delivery,
+    },
+    {
+      key: "type",
+      label: "Type:",
+      icon: "✈",
+      iconClass: "type-icon",
+      value: visaType,
+      set: setVisaType,
+      options: OPTIONS.type,
+    },
+    {
+      key: "documents",
+      label: "Documents:",
+      icon: "▤",
+      iconClass: "documents-icon",
+      value: documents,
+      set: setDocuments,
+      options: OPTIONS.documents,
+    },
+  ];
+
   return (
     <section className="atlys-filter-section">
-      <div className="atlys-filters">
-
-        <div className="atlys-filter">
-          <div className="filter-icon delivery-icon">
-            ⚡
-          </div>
-
-          <div className="filter-text">
-            <span className="filter-label">
-              Visa delivery:
-            </span>
-
-            <select
-              value={visaDelivery}
-              onChange={(e) =>
-                setVisaDelivery(e.target.value)
-              }
+      <div className="atlys-filters" ref={barRef}>
+        {filters.map((f) => (
+          <div className="atlys-filter" key={f.key}>
+            <button
+              type="button"
+              className="atlys-filter-btn"
+              onClick={() => toggle(f.key)}
             >
-              <option>Any Time</option>
-              <option>Fastest</option>
-              <option>Standard</option>
-            </select>
+              <span className={`filter-icon ${f.iconClass}`}>{f.icon}</span>
+              <span className="filter-text">
+                <span className="filter-label">{f.label}</span>
+                <span className="filter-value">
+                  {f.value}
+                  <Chevron open={openMenu === f.key} />
+                </span>
+              </span>
+            </button>
+
+            {openMenu === f.key && (
+              <ul className="atlys-menu">
+                {f.options.map((opt) => (
+                  <li key={opt}>
+                    <button
+                      type="button"
+                      className={opt === f.value ? "selected" : ""}
+                      onClick={() => {
+                        f.set(opt);
+                        setOpenMenu(null);
+                      }}
+                    >
+                      {opt}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
-        </div>
-
-        <div className="atlys-filter">
-          <div className="filter-icon type-icon">
-            ▰
-          </div>
-
-          <div className="filter-text">
-            <span className="filter-label">
-              Type:
-            </span>
-
-            <select
-              value={visaType}
-              onChange={(e) =>
-                setVisaType(e.target.value)
-              }
-            >
-              <option>All Visa Types</option>
-              <option>e-Visa</option>
-              <option>Sticker</option>
-              <option>Visa on Arrival</option>
-              <option>No Visa Required</option>
-            </select>
-          </div>
-        </div>
-
-        <div className="atlys-filter">
-          <div className="filter-icon documents-icon">
-            ▣
-          </div>
-
-          <div className="filter-text">
-            <span className="filter-label">
-              Documents:
-            </span>
-
-            <select
-              value={documents}
-              onChange={(e) =>
-                setDocuments(e.target.value)
-              }
-            >
-              <option>Any Documents</option>
-              <option>Passport</option>
-              <option>Photo</option>
-              <option>Bank Statements</option>
-              <option>Income Tax Returns</option>
-            </select>
-          </div>
-        </div>
+        ))}
 
         <div className="atlys-filter holiday-filter">
-          <div className="filter-icon holiday-icon">
-            ◒
-          </div>
-
-          <div className="filter-text">
-            <span className="filter-label">
-              Holidays:
+          <button
+            type="button"
+            className="atlys-filter-btn"
+            onClick={() => toggle("dates")}
+          >
+            <span className="filter-icon holiday-icon">✈</span>
+            <span className="filter-text">
+              <span className="filter-label">Holidays:</span>
+              <span className="filter-value">
+                {dateLabel}
+                <Chevron open={openMenu === "dates"} />
+              </span>
             </span>
+          </button>
 
-            <input
-              type="date"
-              value={travelDate}
-              min={todayString}
-              onChange={(e) =>
-                setTravelDate(e.target.value)
-              }
-            />
-          </div>
+          {openMenu === "dates" && (
+            <div className="atlys-menu atlys-date-menu">
+              <input
+                type="date"
+                value={travelDate}
+                min={todayString}
+                autoFocus
+                onChange={(e) => {
+                  setTravelDate(e.target.value);
+                  setOpenMenu(null);
+                }}
+              />
+              {travelDate && (
+                <button
+                  type="button"
+                  className="atlys-date-clear"
+                  onClick={() => {
+                    setTravelDate("");
+                    setOpenMenu(null);
+                  }}
+                >
+                  Clear date
+                </button>
+              )}
+            </div>
+          )}
         </div>
-
       </div>
     </section>
   );

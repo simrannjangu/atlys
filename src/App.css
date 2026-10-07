@@ -56,6 +56,7 @@ a {
 
 .logo span {
   color: #5b50df;
+ 
 }
 
 .nav-links {
@@ -557,7 +558,10 @@ a {
   border-radius: 20px;
   padding: 25px;
 }
-
+.events-root .event-card { padding: 0; }
+.events-root .events-grid { gap: 42px 27px; }
+.events-root .events-top { padding-top: 20px; }
+               
 /* =========================================
    NOT FOUND
    ========================================= */
