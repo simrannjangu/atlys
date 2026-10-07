@@ -4,6 +4,9 @@ import Logo from "./Logo";
 
 const VISA_API = "https://atlys-backend-cr9i.onrender.com/api/visas";
 
+/* Explore / Events tabs are shown ONLY on these pages */
+const SHOW_NAV_PATHS = ["/", "/events"];
+
 /* cached so the API is only called once per page load */
 let visaCache = null;
 
@@ -80,17 +83,11 @@ function Navbar() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isExplore =
-    location.pathname === "/" || location.pathname.startsWith("/visa/");
+  const isExplore = location.pathname === "/";
   const isEvents = location.pathname === "/events";
-  const HIDE_NAV_PATHS = [
-  "/contact",
-  "/partners",
-  "/refunds-policy",
-  "/transparency/price-change-log",
-  "/fee-change-audit",
-];
-const hideNav = HIDE_NAV_PATHS.includes(location.pathname);
+
+  /* tabs visible only on home and events */
+  const hideNav = !SHOW_NAV_PATHS.includes(location.pathname);
 
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -204,7 +201,7 @@ const hideNav = HIDE_NAV_PATHS.includes(location.pathname);
   };
 
   return (
-  <header className={`atlys-navbar ${hideNav ? "no-nav" : ""}`}>
+    <header className={`atlys-navbar ${hideNav ? "no-nav" : ""}`}>
       {/* LEFT */}
       <div className="navbar-left">
         <Logo size="md" />
@@ -224,22 +221,22 @@ const hideNav = HIDE_NAV_PATHS.includes(location.pathname);
         </Link>
       </div>
 
-      {/* CENTER */}
+      {/* CENTER: only on home and events */}
       {hideNav ? (
-  <div />
-) : (
-  <nav className="navbar-center">
-    <Link to="/" className={`nav-main-item ${isExplore ? "active" : ""}`}>
-      <div className="nav-round-icon passport-icon">🛂</div>
-      <span>Explore</span>
-    </Link>
+        <div />
+      ) : (
+        <nav className="navbar-center">
+          <Link to="/" className={`nav-main-item ${isExplore ? "active" : ""}`}>
+            <div className="nav-round-icon passport-icon">🛂</div>
+            <span>Explore</span>
+          </Link>
 
-    <Link to="/events" className={`nav-main-item ${isEvents ? "active" : ""}`}>
-      <div className="nav-round-icon event-icon">🎟️</div>
-      <span>Events</span>
-    </Link>
-  </nav>
-)}
+          <Link to="/events" className={`nav-main-item ${isEvents ? "active" : ""}`}>
+            <div className="nav-round-icon event-icon">🎟️</div>
+            <span>Events</span>
+          </Link>
+        </nav>
+      )}
 
       {/* RIGHT */}
       <div className="navbar-right">

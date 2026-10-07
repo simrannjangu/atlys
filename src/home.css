@@ -672,3 +672,291 @@
 .nr-header .vz-sm { width: 105px; }
 .speed-logo { letter-spacing: .18em !important; font-weight: 600; }
 .sp-logo { letter-spacing: .18em; font-size: 24px !important; }
+/* =========================================================
+   MOBILE / TABLET RESPONSIVE  (keep this at the END of home.css)
+   ========================================================= */
+
+.atlys-style-home { overflow-x: clip; }
+
+/* ---------- up to tablet (820px) ---------- */
+@media (max-width: 820px) {
+
+  /* NAVBAR: logo + search on row 1, Explore/Events on row 2 */
+  .atlys-navbar {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "left right" "center center";
+    padding: 12px 16px 0;
+    row-gap: 10px;
+  }
+  .atlys-navbar.no-nav {
+    grid-template-areas: "left right";
+    padding-bottom: 12px;
+  }
+  .atlys-navbar.no-nav > :nth-child(2) { display: none; }
+
+  .navbar-left   { grid-area: left; gap: 10px; }
+  .navbar-right  { grid-area: right; gap: 10px; }
+  .navbar-center { grid-area: center; justify-content: center; gap: 36px; }
+  .navbar-divider { display: none; }
+
+  .atlys-navbar .vz-md { width: 104px; }
+  .on-time-icon { width: 40px; height: 40px; }
+
+  .nav-main-item { min-width: 72px; gap: 6px; font-size: 14px; padding-bottom: 12px; }
+  .nav-round-icon { width: 56px; height: 56px; font-size: 24px; }
+  .nav-main-item.active::after { width: 24px; }
+  .profile-button { width: 44px; height: 44px; }
+
+  /* SEARCH: icon button that expands when tapped */
+  .country-search-wrap { position: static; }
+  .country-search { display: flex; width: 44px; height: 44px; padding: 0 12px; gap: 0; }
+  .country-search input { flex: 0 0 1px; width: 1px; min-width: 0; padding: 0; opacity: 0; }
+  .country-search.is-open { width: min(230px, calc(100vw - 150px)); gap: 10px; }
+  .country-search.is-open input { flex: 1; width: auto; opacity: 1; }
+  .search-dropdown {
+    position: absolute;
+    top: 88px; left: 16px; right: 16px;
+    width: auto;
+    max-height: 60vh;
+  }
+
+  /* FILTER BAR: 2 x 2 grid */
+  .atlys-filter-section { padding: 14px 12px 0; }
+  .atlys-filters {
+    flex-wrap: wrap;
+    min-height: 0;
+    border-radius: 22px;
+    box-shadow: 0 6px 22px rgba(0,0,0,.07);
+  }
+  .atlys-filter { flex: 1 1 50%; }
+  .atlys-filter:nth-child(odd)  { border-right: 1px solid #eee; }
+  .atlys-filter:nth-child(n+3)  { border-top: 1px solid #eee; }
+  .atlys-filter-btn { min-height: 64px; padding: 0 14px; gap: 10px; border-radius: 0; }
+  .filter-icon { width: 24px; height: 24px; font-size: 12px; }
+  .filter-label { font-size: 12px; }
+  .filter-value { font-size: 15px; gap: 6px; }
+
+  .atlys-menu { min-width: 190px; top: calc(100% + 6px); }
+  .atlys-filter:nth-child(odd)  .atlys-menu { left: 8px; right: auto; }
+  .atlys-filter:nth-child(even) .atlys-menu { left: auto; right: 8px; }
+
+  /* CARDS */
+  .popular-destinations { padding: 24px 16px 120px; }
+  .visa-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .visa-card { height: 420px; border-radius: 28px; }
+  .visa-card-overlay { padding: 0 20px 22px; }
+  .visa-country h3 { font-size: 22px; }
+  .visa-detail span { font-size: 11px; }
+  .visa-detail strong { font-size: 12.5px; letter-spacing: .02em; }
+
+  /* FLOATING LIST / MAP SWITCHER */
+  .floating-view-switcher { bottom: calc(14px + env(safe-area-inset-bottom)) !important; }
+  .floating-view-switcher button { width: 54px; height: 44px; }
+
+  /* FOOTER: keep text clear of the floating switcher */
+  .site-footer { padding-bottom: 84px !important; }
+}
+
+/* ---------- map height on tablet + phone ---------- */
+@media (max-width: 1000px) {
+  .map-mode .vm-map { height: 100vh; height: 100dvh; min-height: 480px; }
+  .map-mode .vm-badge { top: 14px; left: 14px; padding: 8px 12px; font-size: 10px; }
+}
+
+/* ---------- phones (600px) ---------- */
+@media (max-width: 600px) {
+  .visa-grid { grid-template-columns: 1fr; }
+  .visa-card { height: 440px; }
+}
+
+/* ---------- small phones (480px): filters in a single column ---------- */
+@media (max-width: 480px) {
+  .atlys-filter { flex: 1 1 100%; border-right: 0 !important; }
+  .atlys-filter:nth-child(n+2) { border-top: 1px solid #eee; }
+  .atlys-filter-btn { min-height: 56px; }
+  .atlys-filter .atlys-menu { left: 8px !important; right: 8px !important; }
+}
+
+/* ---------- touch screens: no hover, so hide the hover-only extras ---------- */
+@media (hover: none) {
+  .visa-card-extra { display: none; }
+  .visa-card::before { opacity: 0; }
+}
+
+/* ---------- EVENTS page on phones ---------- */
+@media (max-width: 620px) {
+  .events-root .ev-top { padding: 16px 12px 0; }
+  .events-root .ev-cat { height: 56px; padding: 0 16px; font-size: 14px; gap: 8px; }
+  .events-root .ev-cat-icon { width: 26px; height: 26px; }
+  .events-root .ev-year { font-size: 26px; margin-top: 36px; }
+  .events-root .ev-card { height: 440px; }
+}
+/* =========================================================
+   MOBILE: 2 filters per row + 2 cards per row
+   (keep at the VERY END of home.css)
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  /* ---------- FILTERS: 2 per row ---------- */
+  .atlys-filters { flex-wrap: wrap; border-radius: 20px; }
+
+  .atlys-filter { flex: 1 1 50% !important; max-width: 50%; }
+  .atlys-filter:nth-child(odd)  { border-right: 1px solid #eee !important; }
+  .atlys-filter:nth-child(even) { border-right: 0 !important; }
+  .atlys-filter:nth-child(-n+2) { border-top: 0 !important; }
+  .atlys-filter:nth-child(n+3)  { border-top: 1px solid #eee !important; }
+
+  .atlys-filter-btn { min-height: 58px; padding: 0 10px; gap: 8px; }
+  .filter-icon { width: 22px; height: 22px; font-size: 11px; }
+  .filter-text { min-width: 0; }
+  .filter-label { font-size: 11px; }
+  .filter-value {
+    font-size: 13px;
+    gap: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .atlys-menu { min-width: 170px; top: calc(100% + 4px); }
+  .atlys-filter:nth-child(odd)  .atlys-menu { left: 6px !important; right: auto !important; }
+  .atlys-filter:nth-child(even) .atlys-menu { left: auto !important; right: 6px !important; }
+
+  /* ---------- CARDS: 2 per row ---------- */
+  .popular-destinations { padding: 20px 12px 120px; }
+
+  .visa-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+
+  .visa-card { height: 300px !important; border-radius: 22px; }
+
+  .visa-card-overlay { padding: 0 12px 14px; }
+
+  .visa-country { gap: 8px; margin-bottom: 10px; }
+
+  .country-flag-placeholder {
+    width: 22px; height: 22px;
+    min-width: 22px; min-height: 22px;
+    max-width: 22px; max-height: 22px;
+    flex: 0 0 22px;
+  }
+
+  .visa-country h3 { font-size: 15px; line-height: 1.1; }
+
+  .visa-card-details {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px 12px;
+    padding-top: 10px;
+  }
+  .visa-detail,
+  .visa-detail:nth-child(2):not(:last-child),
+  .visa-detail:last-child:not(:first-child) {
+    align-items: flex-start;
+    text-align: left;
+    gap: 3px;
+  }
+  .visa-detail span { font-size: 8.5px; letter-spacing: .08em; }
+  .visa-detail strong {
+    font-size: 10px;
+    letter-spacing: .02em;
+    white-space: normal;
+  }
+}
+
+/* very small phones */
+@media (max-width: 360px) {
+  .visa-card { height: 270px !important; }
+  .visa-country h3 { font-size: 13px; }
+  .filter-value { font-size: 12px; }
+}
+
+/* the Explore / Events tabs stay side by side in one row */
+@media (max-width: 820px) {
+  .navbar-center { flex-wrap: nowrap; }
+}
+/* =========================================================
+   EVENTS PAGE: 2 cards per row on phones
+   (keep at the VERY END of home.css)
+   ========================================================= */
+
+@media (max-width: 820px) {
+
+  /* category bar: one swipeable row */
+  .events-root .ev-top { padding: 14px 10px 0; }
+  .events-root .ev-bar {
+    max-width: 100%;
+    border-radius: 999px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+  .events-root .ev-cat {
+    height: 50px;
+    padding: 0 14px;
+    font-size: 12.5px;
+    gap: 7px;
+    flex-shrink: 0;
+  }
+  .events-root .ev-cat-icon { width: 24px; height: 24px; }
+  .events-root .ev-cat-icon svg { width: 13px; height: 13px; }
+  .events-root .ev-cat.on::after { width: 36px; }
+
+  /* heading */
+  .events-root .ev-year { font-size: 24px; margin-top: 28px; }
+  .events-root .ev-wrap { margin-top: 24px; }
+
+  /* content width */
+  .events-root .ev-content { width: calc(100% - 24px) !important; margin: 0 12px; }
+
+  /* month label above each group */
+  .events-root .ev-month-head {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  /* 2 cards per row */
+  .events-root .ev-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+  .events-root .ev-card,
+  .events-root .ev-skel {
+    height: 300px !important;
+    border-radius: 22px;
+  }
+  .events-root .ev-section { padding-bottom: 28px; }
+
+  /* card text */
+  .events-root .ev-body { padding: 0 12px 14px; }
+  .events-root .ev-flag { width: 22px; height: 22px; margin-bottom: 8px; }
+  .events-root .ev-body h3 { font-size: 14px; line-height: 1.15; }
+  .events-root .ev-date { font-size: 10px; margin-top: 6px; }
+  .events-root .ev-meta {
+    margin-top: 10px;
+    padding-top: 9px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .events-root .ev-meta div { gap: 3px; }
+  .events-root .ev-meta-right { text-align: left; align-items: flex-start; }
+  .events-root .ev-meta span { font-size: 8px; letter-spacing: .08em; }
+  .events-root .ev-meta strong {
+    font-size: 9.5px;
+    letter-spacing: .02em;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 360px) {
+  .events-root .ev-card,
+  .events-root .ev-skel { height: 270px !important; }
+  .events-root .ev-body h3 { font-size: 12.5px; }
+}

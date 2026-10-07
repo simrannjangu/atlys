@@ -190,9 +190,11 @@ function Speed() {
       ? String(today.dayNumber).padStart(2, "0")
       : getDay(currentDate);
 
-  const currentMonth =
-    today?.monthYear ||
-    `${getMonth(currentDate)} ${getYear(currentDate)}`;
+ const currentMonth = today?.monthYear
+  ? String(today.monthYear)
+      .replace(/\b(19|20)\d{2}\b/g, "")
+      .trim()
+  : getMonth(currentDate);
 
   const currentYear = getYear(currentDate);
 
